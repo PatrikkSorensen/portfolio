@@ -63,7 +63,7 @@ export function getFilters() {
 
 export function addFilter(tag) {
 	console.log("ActionCreator addFilter: ", tag); 
-	filters.push(tag); 
+	filters.push(tag.label); 
 	return {
 		payload: filters, 
 		type: ADD_FILTER

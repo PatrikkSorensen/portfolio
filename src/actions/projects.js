@@ -7,7 +7,7 @@ const projects = [
 		tags: ['Interactive evolition', 'Architecture', 'Augmented Reality', 'Machine Learning', 'Evolutionary algorithms', 'Interaction design', 'Flora Robotica,', 'Compositional Pattern Producing Networks', 'NeuroEvolution'],
 		created_with: ['C#', 'Python', 'Grasshopper', 'Rhinoceros3d', 'UDP', 'NEAT'], 
 		role: ['Programmer', 'Designer'], 
-		collaborators: ['CITA Studio'],
+		collaborators: ['CITA Studio', 'Phil Ayres', 'Sebastian Risi'],
 		date: 2016, 
 		content:  [
 			{
@@ -127,7 +127,7 @@ const projects = [
 		tags: ['Machine learning', 'Interactive Evolution', 'Super Mario', 'Game AI', 'User-evolved behaviours', 'NeuroEvolution'],
 		created_with: ['Java', 'File I/O', 'Java swing', 'ANJI'], 
 		role: ['Programmer', 'Designer'], 
-		collaborators: ['Jeppeh Olsen, Sebastian Risi'],
+		collaborators: ['Jeppeh Olsen', 'Sebastian Risi'],
 		date: 2015, 
 		content:  [
 			{
@@ -160,7 +160,7 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "In this project, users is able to evolve Mario controllers that is able to complete a Mario level. To do this, the Mario controller must rescue the dear princess Daisy by reaching the of the Mario level by overcoming various enemies and obstacles.", 
+						text: "In this project, users is able to evolve various Mario controllers by simple looking at a selection of GIF files, and click on the behaviour they like most (see video below). This is then repeated until the controller has been evolved enough to overcome the various enemies and level terrain that exists in the legendary Mario world."  
 					}
 				],
 			},
@@ -335,8 +335,14 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "pre-processing of data is handled by Fourier Transformation, clustering is achieved through Principal Component Analysis to reduce the amount of dimensions, K-nearest neighbour and Artificial Neural Networks are used as classification algorithms, and k-fold cross-validation is used to validate our results."
-					}
+						text: "pre-processing of data is handled by Fourier Transformation, clustering is achieved through Principal Component Analysis to reduce the amount of dimensions, K-nearest neighbour and Artificial Neural Networks are used as classification algorithms, and k-fold cross-validation is used to validate our results. In the end, we get an accuracy of 94% with K-nearest neightbour and 96% with artificial neural networks. For a list of the current state of the art of recognizing new handwritten digits by using the MNIST dataset, see "
+					}, 
+					{
+						link: {
+							target: "http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html", 
+							label: "here."
+						}
+					},
 				]
 			}, 
 		]
@@ -517,13 +523,34 @@ const projects = [
 		name: 'Creating a modern web portfolio with Spring and Redux' ,
 		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning'],
 		role: ['Programmer'], 
-		created_with: ['MatLab'], 
-		collaborators: ['Jeppeh Olsen', 'Mads Anthony'],
+		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux', 'Spring'], 
 		date: 2017, 
 		content:  [
 			{
-				paragraph: 'Interactive Braid Evolution is a collaboration between CITA and ITU building on the research project: Flora Robotica that explores how biology, robotics, and artificial intelligence can live side by side and contemplate each other. Building on top of CITAs previous work, interactive braid evolution incorperates Interactive Evolutionary Computation to see how ordinary users may form braids that can be used effectively by other plants, and conribute to a bio-hybrid garden.'
-			}
+				paragraph: [
+					{
+						text: "I had always wanted to pick up the "
+					},
+					{
+						link: {
+							target: "https://github.com/e-conomic/client-side-application-course",
+							label: "React course"
+						}
+					}, 
+					{
+						text: "offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When MOOC offered their "
+					}, 
+					{
+						link: {
+							target: "http://mooc.fi/courses/2016/cybersecurity/",
+							label: "Cyber Security Course"
+						}
+					}, 
+					{
+						text: " for free, i saw an opportunity to combine the two modern frameworks to create a interesting (and secure!) web application."
+					}
+				]
+			}, 
 		]
 	}
 ]

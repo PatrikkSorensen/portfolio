@@ -9,7 +9,7 @@ function compareStrings(str1, str2) {
 }
 
 function filterProjectsByTags(filters, tags) {
-
+  console.log("Filters and tags, ", filters, tags);
   for(let i = 0; i < filters.length; i++){
       for(let j = 0; j < tags.length; j++) {
         if(compareStrings(filters[i], tags[j])) {
@@ -55,7 +55,6 @@ class ProjectContainer extends Component {
     }
 
     for(j = 0; j < cardProjects.length - i - j; j++) {
-      console.log("Hello world", cardProjects.length, i ,j); 
       remainders[j] = this.renderCardProject(cardProjects[i + j], "col-sm-4");
     }
 
@@ -64,7 +63,7 @@ class ProjectContainer extends Component {
         <div className="projects-container">
           {container}
           <div className="row">
-            <div className="col-sm-8 col-sm-offset-2" >
+            <div className="col-sm-10 col-sm-offset-1" >
               <div className="row">
                 {remainders}
               </div>
@@ -84,7 +83,7 @@ class ProjectContainer extends Component {
     projects = [p1, p2, p3]; 
     return (
       <div className="row" key={"row-" + id}>
-        <div className="col-sm-8 col-sm-offset-2" key={"column-" + id}>
+        <div className="col-sm-10 col-sm-offset-1" key={"column-" + id}>
           <div className="row" key={"div- " + id}>{ projects } </div>
         </div>
       </div>
@@ -93,7 +92,8 @@ class ProjectContainer extends Component {
 
   renderCardProject(project, className) {  
     //console.log("render card projects", project); 
-    let tags = project.tags.map((tag) => tag + " "); 
+    //let tags = project.tags.map((tag) => tag + " "); 
+    let tags = project.tags.join(', ') + '.'; 
     return (
       <span className={className} key ={"span-" + project.id}>
           <CardProject 

@@ -29,7 +29,7 @@ class Project extends Component {
 			<div key={id} className="row">
 				<div className="col-sm-8 col-sm-offset-2">
 					<figure>
-						<img src={"http://localhost:8080/images/" + src } width="400px" /> 
+						<img src={"http://localhost:8080/images/" + src } width="600px" className="center-block" /> 
 						<figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
 					</figure>
 				</div>

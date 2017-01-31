@@ -26,6 +26,7 @@ class ProjectList extends Component {
 	renderProject(project) {
 		let tags = this.convertArrayToCSVString(project.tags, ', '); 
 		let roles = this.convertArrayToCSVString(project.role, ', '); 
+		let collaborators = this.convertArrayToCSVString(project.collaborators, ', '); 
 
 		return <Project 
 					key={project.id} 
@@ -34,7 +35,7 @@ class ProjectList extends Component {
 					content={project.content} 
 					tags={tags}
 					role={roles}
-					collaborators={project.collaborators}
+					collaborators={collaborators}
 					source={project.source}
 					year={project.date}
 				/> 
@@ -42,9 +43,19 @@ class ProjectList extends Component {
 	render() {
 		let content; 
 		if(!this.props.params.id && this.props.projects.length > 0) {
-			content = <ProjectContainer 
-				projects={this.props.projects} 
-				filters={this.props.filters} />; 
+			content = 	(
+			<div>
+				<div className="row project-page">
+					<div className="col-sm-10 col-sm-offset-1">
+						<h1>Projects</h1>
+					</div>
+				</div>
+				<ProjectContainer 
+					projects={this.props.projects} 
+					filters={this.props.filters} 
+				/>
+			</div>
+				); 
 		} else {
 			content = this.props.projects.map(this.renderProject.bind(this));
 		}

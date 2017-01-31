@@ -10,7 +10,7 @@ class CVPage extends Component {
 	}
 	renderCourse(course) {
 		if(course.ects) {
-			return <li>{course.name} ( {course.ects } ECTS  )</li>
+			return <li>{course.name} </li>
 		} else { 
 			return <li>{course.name} </li>
 		}
@@ -33,21 +33,22 @@ class CVPage extends Component {
 		);
 	}
 	render() {
-	console.log("CVPage, ", this.props.schools);  
 		return (
 		<Layout>
-			<div className="row">
-				<div className="col-sm-4 col-sm-offset-1">
-					<h2>Education: </h2>
+			<div className="cv-page">
+				<div className="row">
+					<div className="col-sm-4 col-sm-offset-1">
+						<h2>Education: </h2>
+					</div>
 				</div>
-			</div>
-			{this.props.schools.map(this.renderSchools.bind(this))}
-			<div className="row">
-				<div className="col-sm-4 col-sm-offset-1">
-					<h2>Selfstudy: </h2>
+				{this.props.schools.map(this.renderSchools.bind(this))}
+				<div className="row">
+					<div className="col-sm-4 col-sm-offset-1">
+						<h2>Selfstudy: </h2>
+					</div>
 				</div>
+				{this.props.selfstudySchools.map(this.renderSchools.bind(this))}
 			</div>
-			{this.props.selfstudySchools.map(this.renderSchools.bind(this))}
 		</Layout>
 		);
 	}

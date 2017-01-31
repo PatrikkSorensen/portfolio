@@ -2,7 +2,6 @@ p, a {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
 .navbar {
 	background-color: black; 
 	height: 80px; 
@@ -39,14 +38,19 @@ p, a {
 	color: grey; 
 }
 
-.card h4 {
-	font-size: 16px; 
+.card h3 {
+	margin-top: 16px;
 	text-align: center; 
 }
 
 .card p {
-	font-size: 8px; 
+	font-size: 14px; 
 }
+
+.card {
+	min-height: 450px;
+}
+
 
 /****************** FRONT PAGE ********************/ 
 .showcase-container {
@@ -56,7 +60,7 @@ p, a {
 
 .showcase-container a {
 	text-align: center; 
-	font-size: 8px;
+	font-size: 14px;
 	color: black; 
 }
 
@@ -65,12 +69,16 @@ p, a {
 }
 
 /****************** PROJECTS PAGE *****************/ 
+.project-page h1 {
+	text-align: center;
+	margin-top: 24px;
+}
 .projects-container {
 	margin-top: 24px; 
 }
 
 .search-field {
-	margin-top: 48px; 
+	margin-top: 24px; 
 }
 
 /* Search field and button css */ 
@@ -90,18 +98,19 @@ p, a {
 }
 
 .post-container p {
-	font-size: 12px; 
+	font-size: 14px; 
 }
 
 figcaption {
 	font-size: 12px; 
+	text-align: center;
 }
 
 .project-meta-info {
 	margin-bottom: 12px; 
 }
 .project-meta-info p {
-	font-size: 12px; 
+	font-size: 14px; 
 	margin-top: 0px; 
 	margin-bottom: 0px;
 }
@@ -110,6 +119,9 @@ figcaption {
 	color: red; 
 }
 
+.add-filter .Select-control { 
+	background-color: gray;
+}
 
 /****************** ABOUT PAGE ********************/ 
 .about-container {
@@ -117,21 +129,25 @@ figcaption {
 }
 
 .about-container {
-	font-size: 10px; 
+	font-size: 14px; 
 }
 
 /****************** CV PAGE ********************/ 
+.cv-page {
+	margin-top: 24px;
+}
 .courses-container li {
-	font-size: 10px; 
+	font-size: 14px; 
 }
 
 footer {
-	height: 110px; 
+	margin-top: 175px; 
+	margin-bottom: 40px; 
 }
 footer p {
 	display: inline;
 	margin-top: 6px; 
-	font-size: 12px; 
+	font-size: 14px; 
 }
 
 footer img {
@@ -141,19 +157,8 @@ footer img {
 footer img .first {
 	margin-left: 0px; 
 }
-footer div {
-	margin-top: 24px; 
-}
+
 .no-radius {
 	border-radius: 0px !important; 
 }
 
-.container-fluid {
-  //padding-right: 0px !important;
- // padding-left: 0px !important;
-}
-
-/* AUTOCOMPLETE */ 
-body {
-  font-family: Helvetica, sans-serif;
-}

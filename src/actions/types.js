@@ -3,6 +3,7 @@ export const FETCH_PROJECT = 'fetch_project';
 export const TOGGLE_PROJECT = 'toggle_project'; 
 export const GET_FILTERS = 'get_tags'; 
 export const ADD_FILTER = 'add_filter'; 
+export const ADD_FILTER_TAG = 'add_filter_tag';
 export const CLEAR_FILTERS = 'clear_filters'; 
 export const REMOVE_FILTER = 'remove_filter';
 export const GET_SEARCH_OPTIONS = 'get_search_options'; 

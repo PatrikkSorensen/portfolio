@@ -9,7 +9,6 @@ class SearchField extends Component {
 	componentWillMount() {
 		this.props.getFilters(); 
 		this.props.getSearchOptions();
-		console.log("mount, ", this.props); 
 	} 
 	renderTags(tag) {
 		return (
@@ -17,39 +16,17 @@ class SearchField extends Component {
 				<button className="btn btn-sm btn-default" onClick={() => this.props.removeFilter(tag)}> {tag} </button>
 	    	</div>)
 	}
-
-	handleFormSubmit(tag) {
-		let string = tag.tag.value; 
-		console.log("Handling form submit", string); 
-		this.props.addFilter(string); 
-	}
-
 	render() {
-		//<Field placeholder="search for..." className="form-control" name="tag" component="input" type="text"/>
-		const { handleSubmit } = this.props;
+	    const { addFilter } = this.props;
 		let filters = this.props.activeFilters.map(this.renderTags.bind(this));
-	    const options = [
-	        {'label': 'Germany', 'value': 'Game Development'},
-	        {'label': 'Russian Federation', 'value': 'RU'},
-	        {'label': 'United States', 'value': 'US'}
-	    ];
-	    console.log("rendering, options: ", this.props.searchOptions); 
+
 		return(
 			<div className="search-container">
 				<div className="row search-field">
-					<div className="col-sm-7 col-sm-offset-2">
-						<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-							<div className="input-group">
-						        <span className="input-group-btn">
-						        	<button className="btn btn-default" type="submit">Submit</button>
-						        </span>
-						        <Field name="tag" options={this.props.searchOptions} component={SearchBar}/>
-						        <span className="input-group-btn">
-						        	<button onClick={this.props.clearFilters} className="btn btn-default" type="button">Clear filters</button>
-						        </span>
-					        </div>
-					    </form>
-
+					<div className="col-sm-6 col-sm-offset-3">
+			        	<span className="col-sm-12">
+			        		<Field onChange={addFilter}  name="tag" options={this.props.searchOptions} component={SearchBar}/>
+			        	</span>
 				    </div>
 			    </div>
 			    <div className="row">
@@ -57,7 +34,6 @@ class SearchField extends Component {
 			    		{filters}
 		    		</div>
 			    </div>
-
 			</div>
 		);
 	}
