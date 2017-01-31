@@ -1,0 +1,159 @@
+p, a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.navbar {
+	background-color: black; 
+	height: 80px; 
+	border-radius: 0px; 
+}
+
+.navbar-inner {
+	margin-top: 12px; 
+}
+
+
+/* spreads out navbar items */
+.headerlinks a {
+	padding-left: 24px; 
+	font-size: 14px; 
+	font-weight: bold; 
+}
+
+.navbar p {
+	color: white; 
+}
+.navbar .first {
+	margin-left: 0px; 
+}
+
+/* for cards */
+.card-link {
+	hover: none; 
+	color: black; 
+}
+
+.card-link:hover{
+	cursor: pointer;
+	color: grey; 
+}
+
+.card h4 {
+	font-size: 16px; 
+	text-align: center; 
+}
+
+.card p {
+	font-size: 8px; 
+}
+
+/****************** FRONT PAGE ********************/ 
+.showcase-container {
+	//background-color: red; 
+	margin-top: 64px; 
+}
+
+.showcase-container a {
+	text-align: center; 
+	font-size: 8px;
+	color: black; 
+}
+
+.welcome-container {
+	margin-top: 128px; 
+}
+
+/****************** PROJECTS PAGE *****************/ 
+.projects-container {
+	margin-top: 24px; 
+}
+
+.search-field {
+	margin-top: 48px; 
+}
+
+/* Search field and button css */ 
+.tag-container {
+	background-color: red; 
+	margin-top: 12px; 
+}
+
+.tag:first-child {
+	margin-left: 0px; 
+}
+.tag button {
+	background-color: orange; 
+}
+.tag:hover button {
+	background-color: green; 
+}
+
+.post-container p {
+	font-size: 12px; 
+}
+
+figcaption {
+	font-size: 12px; 
+}
+
+.project-meta-info {
+	margin-bottom: 12px; 
+}
+.project-meta-info p {
+	font-size: 12px; 
+	margin-top: 0px; 
+	margin-bottom: 0px;
+}
+
+.meta-label {
+	color: red; 
+}
+
+
+/****************** ABOUT PAGE ********************/ 
+.about-container {
+	margin-top: 48px; 
+}
+
+.about-container {
+	font-size: 10px; 
+}
+
+/****************** CV PAGE ********************/ 
+.courses-container li {
+	font-size: 10px; 
+}
+
+footer {
+	height: 110px; 
+}
+footer p {
+	display: inline;
+	margin-top: 6px; 
+	font-size: 12px; 
+}
+
+footer img {
+	margin-left: 12px; 
+}
+
+footer img .first {
+	margin-left: 0px; 
+}
+footer div {
+	margin-top: 24px; 
+}
+.no-radius {
+	border-radius: 0px !important; 
+}
+
+.container-fluid {
+  //padding-right: 0px !important;
+ // padding-left: 0px !important;
+}
+
+/* AUTOCOMPLETE */ 
+body {
+  font-family: Helvetica, sans-serif;
+}

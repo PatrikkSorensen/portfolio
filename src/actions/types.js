@@ -1,0 +1,9 @@
+export const FETCH_PROJECTS = 'fetch_projects'; 
+export const FETCH_PROJECT = 'fetch_project'; 
+export const TOGGLE_PROJECT = 'toggle_project'; 
+export const GET_FILTERS = 'get_tags'; 
+export const ADD_FILTER = 'add_filter'; 
+export const CLEAR_FILTERS = 'clear_filters'; 
+export const REMOVE_FILTER = 'remove_filter';
+export const GET_SEARCH_OPTIONS = 'get_search_options'; 
+export const GET_COURSES = 'get_projects'; 
