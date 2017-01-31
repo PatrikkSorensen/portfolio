@@ -132,6 +132,15 @@ figcaption {
 	font-size: 14px; 
 }
 
+.about-img-container {
+	margin-top: 96px; 
+}
+
+figcaption {
+	font-size: 14px;
+	font-weight: bold; 
+}
+
 /****************** CV PAGE ********************/ 
 .cv-page {
 	margin-top: 24px;
