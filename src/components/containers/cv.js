@@ -55,7 +55,7 @@ class CVPage extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log("cv maptstatetoprops", state.cv); 
+	//console.log("cv maptstatetoprops", state.cv); 
 	return { 
 		schools : state.cv.schools, 
 		selfstudySchools: state.cv.selfstudySchools

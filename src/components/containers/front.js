@@ -13,9 +13,10 @@ class FrontPage extends Component {
 	}
 	renderCardProject(project, className) { 
 		if(project) {
+		let tags = project.tags.join(', ') + '.'; 
 		return (
 			<span className={className}> 
-				<CardProject imgPath={project.cover} name={project.name} tags={project.tags} onClick={() => this.props.onClick(project.id)}/> 
+				<CardProject imgPath={project.cover} name={project.name} tags={tags} onClick={() => this.props.onClick(project.id)}/> 
 			</span>
 		);
 	}
@@ -25,9 +26,9 @@ class FrontPage extends Component {
 
 		if(this.props.projects.length > 0) {
 			projects = []; 
-			projects[0] = this.renderCardProject(this.props.projects[4], "col-md-4")
-			projects[1] = this.renderCardProject(this.props.projects[5], "col-md-4")
-			projects[2] = this.renderCardProject(this.props.projects[6], "col-md-4")
+			projects[0] = this.renderCardProject(this.props.projects[0], "col-md-4")
+			projects[1] = this.renderCardProject(this.props.projects[1], "col-md-4")
+			projects[2] = this.renderCardProject(this.props.projects[2], "col-md-4")
 		}
 
 		return (

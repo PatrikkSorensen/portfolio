@@ -40,7 +40,7 @@ class SearchField extends Component {
 }
 
 function mapStateToProps(state) {
-	 console.log("Search field: MapStateToProps", state.filters); 
+	//console.log("Search field: MapStateToProps", state.filters); 
 	return { 
 		activeFilters : state.filters.activeFilters,
 		searchOptions : state.filters.searchOptions
@@ -57,7 +57,7 @@ const mapDispatchToProps = {
 }
 
 function validate(formProps) {
-	console.log("Recieved formprops", formProps)
+	//console.log("Recieved formprops", formProps)
 }
 
 SearchField = reduxForm({

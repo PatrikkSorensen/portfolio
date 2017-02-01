@@ -101,9 +101,18 @@ p, a {
 	font-size: 14px; 
 }
 
+.post-container h4 {
+	margin-bottom: 0px; 
+}
+
 figcaption {
 	font-size: 12px; 
 	text-align: center;
+}
+
+iframe {
+    margin: 24px auto;
+    display: block;
 }
 
 .project-meta-info {

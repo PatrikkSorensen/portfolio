@@ -20,13 +20,13 @@ class ProjectList extends Component {
 			this.props.fetchProjects();
 		}
 	}
-	convertArrayToCSVString(array, delimter) {
+	convertArrayToCSVString(array) {
 		return array.join(', ') + '.'; 
 	}
 	renderProject(project) {
-		let tags = this.convertArrayToCSVString(project.tags, ', '); 
-		let roles = this.convertArrayToCSVString(project.role, ', '); 
-		let collaborators = this.convertArrayToCSVString(project.collaborators, ', '); 
+		let tags = this.convertArrayToCSVString(project.tags); 
+		let roles = this.convertArrayToCSVString(project.role); 
+		let collaborators = this.convertArrayToCSVString(project.collaborators); 
 
 		return <Project 
 					key={project.id} 

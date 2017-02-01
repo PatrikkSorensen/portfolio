@@ -32,6 +32,12 @@ const courses = [
 				ects : 7.5
 			}, 
 			{
+				name: 'Data mining',
+				year: '2015', 
+				season: 'spring',  
+				ects : 15.0
+			}, 
+			{
 				name: 'Modern AI for Games',
 				year: '2015', 
 				season: 'autumn',  

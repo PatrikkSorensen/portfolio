@@ -61,7 +61,7 @@ class Project extends Component {
 	renderVideo(url) {
 		return (
 			<div className="row">
-				<div className="col-sm-8 col-sm-offset-2">
+				<div className="col-sm-12">
 					<iframe width="420" height="345" src={url}></iframe>
 				</div>
 			</div>
@@ -69,14 +69,38 @@ class Project extends Component {
 	}
 	renderAudio(clip) {
 		return (
-	      	<ReactAudioPlayer 
+	      	<ReactAudioPlayer className="center-block"
 	      		src={clip}
 	      		autoPlay 
       		/>
   		);
 	}
+	renderGallery(array) {
+		let images = array.map(function(image) {
+			return <div className="col-md-4"><img src={"http://localhost:8080/images/" + image } width="300px"/></div>
+		});
+		return (
+			<div className="row">
+				{images}
+			</div>
+		)
+	}
+	renderVideoGallery(array) {
+		let videos = array.map(function(url) {
+			return (
+				<div className="col-sm-4">
+					<iframe width="300" height="250" src={url}></iframe>
+				</div>
+			);
+		});
+
+		return (
+			<div className="row">
+				{videos}
+			</div>
+		);
+	}
 	render() {
-		console.log("project", this.props.content);
 		let contents = this.props.content.map(function(content) {
 			id += 1; 
 			if(content.paragraph != undefined) {
@@ -91,15 +115,21 @@ class Project extends Component {
 				return this.renderVideo(content.video); 
 			} else if (content.audio) {
 				return this.renderAudio(content.audio);
+			} else if (content.gallery) {
+				return this.renderGallery(content.gallery); 
+			} else if (content.videoGallery) {
+				return this.renderVideoGallery(content.videoGallery);
 			}
 		}.bind(this));
+
 		let source; 
 		if(this.props.source) {
 			source = (
-					<p>
-						<span className="meta-label">Source: </span> 
-						{this.props.source}
-					</p>);
+				<p>
+					<span className="meta-label">Source: </span> 
+					{this.props.source}
+				</p>
+			);
 		}
 		return(
 			<div>

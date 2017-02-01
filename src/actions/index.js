@@ -13,7 +13,9 @@ import {
 import {browserHistory, Router} from 'react-router';
 import Schools from './courses'; 
 import SelfStudySchools from './selfstudy_data'; 
+import WorkExperienceData from './workdata'; 
 import projects from './projects'; 
+
 
 let filters = []; 
 let selectOptions = projects.map(project => {
@@ -54,7 +56,6 @@ export function fetchFrontPageProjects() {
 }
 
 export function getFilters() {
-	console.log("Getting filters");
 	return {
 		payload: filters, 
 		type: GET_FILTERS
@@ -62,7 +63,6 @@ export function getFilters() {
 }
 
 export function addFilter(tag) {
-	console.log("ActionCreator addFilter: ", tag); 
 	filters.push(tag.label); 
 	return {
 		payload: filters, 
@@ -94,7 +94,6 @@ export function getSearchOptions() {
 }
 
 export function getCourses() {
-	console.log("Firing action getCourses", Schools); 
 	return {
 		payload : Schools, 
 		selfstudySchools: SelfStudySchools,

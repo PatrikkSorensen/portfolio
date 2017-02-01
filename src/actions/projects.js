@@ -11,6 +11,20 @@ const projects = [
 		date: 2016, 
 		content:  [
 			{
+				italicText: [
+					{
+						text: 'The project was done as my master thesis and can be downloaded  '
+					}, 
+					{	
+						link: {
+							target: "../images/iec-mario/mario_ai_cig2016.pdf",
+							label: "here.",
+						}
+					},   
+
+				],
+			},
+			{
 				paragraph: [
 					{
 						text: 'Interactive Braid Evolution is a collaboration between the '
@@ -101,22 +115,10 @@ const projects = [
 			},
 			{
 				img: '/iec-braids/comparison.png'
-			}, 
+			}, 				
 			{
-				paragraph: [
-					{
-						text: 'The project was done as my master thesis and can be downloaded  '
-					}, 
-					{	
-						link: {
-							target: "../images/iec-mario/mario_ai_cig2016.pdf",
-							label: "here.",
-						}
-					},   
-
-				],
-			}, 
-			
+				img: '/iec-braids/braid-comparison.png'
+			}
 		]
 	},
 	{
@@ -167,6 +169,9 @@ const projects = [
 			{
 				video: "https://www.youtube.com/v/1rabANglJ14"
 			}, 
+			{
+				subtitle: "More work: "
+			},
 			{
 				paragraph: [
 					{ 
@@ -245,6 +250,39 @@ const projects = [
 					}
 				],
 			}, 
+			{
+				gallery: [
+					'../images/curcuit/1.png', '../images/curcuit/2.png', '../images/curcuit/3.png']
+			}, 
+			{
+				paragraph: [
+					{
+						text: "Even though my title was lead or main programmer, the roles and assignment we take on the team can vary throughout the development process. Of the main things i was working on, was gameplaying programming, event systems, camera programming, animation control, AI pathfinding, and visual effects programming. While each of these areas was certainly most interesting, the line renderer assignment was a fair challenge in terms of the algorithm and programming techniques that had to be applied."
+					}, 
+				],
+			}, 
+			{
+				subtitle: "The line-renderer algorithm"
+			},
+			{
+				paragraph: [
+					{
+						text: "The line-renderer algorithm is all about keeping track of the state of each node, and create a decision on how that particular node should behave, e.g. should it chanel power further down the pipeline. Some nodes requires multiple power sources, other nodes changes the target for a power source, and finally some nodes can be activated by activating a lightstation by the player. To do this, each character stands on a seperate field and presses the 'x' button for more than 1 second."
+					}
+				],
+			}, 
+			{
+				paragraph: [
+					{
+						text: "While the overall objective is to keep track of an overall state that describes all nodes of a specific line-renderer puzzle, there can exist multiple chanelling flows between the nodes that can be interupted, broken, and needs to be error-prune to the user - meaning that they should be able to chanel twice, or hack the specific node. Likewise the line-renderer algorithm was created as a system that the teams designer could utilize and easily integrate visuals, speed, and other attributes that controlled each node."}
+				],
+			}, 
+			{
+				img: "/curcuit/line-2.png"
+			}, 
+			{
+				videoGallery: ["https://www.youtube.com/v/azY9w9Gl7Q4", "https://www.youtube.com/v/0SmZFX7SnBs", "https://www.youtube.com/v/HjJT8oIAULo"]
+			}
 
 		]
 	},
@@ -253,7 +291,7 @@ const projects = [
 		cover : 'map-generator/map-small.png',
 		name: 'Classifying NASA maps to create other maps' ,
 		source: "https://github.com/PolygeneLubricants/GAER-F2015",
-		tags: ['Machine learning', 'Architecture', 'Augmented Reality'],
+		tags: ['Machine Learning', 'Support Vector Machine', ' Diamond-square algorithm', 'Evolutionary Algorithm', 'Map generation', 'Procedural content', 'Supervised Learning'],
 		created_with: ['Java'], 
 		role: ['Programmer'], 
 		collaborators: ['Jeppeh Olsen', 'Andreas Christiansen'],
@@ -271,6 +309,34 @@ const projects = [
 			}, 
 			{
 				img: "/map-generator/map.png"
+			}, 
+			{
+				subtitle: 'Results'
+			}, 
+			{
+				paragraph: [
+					{
+						text: "The overall goal of the learning algorithm is to capture patterns, and be able to produce such patterns in a generic and flexible way in order to create new maps that can be used for a video game like "
+					}, 
+					{
+						link: {
+							target: "https://en.wikipedia.org/wiki/Civilization_(series)",
+							label: "Civilization"
+						}
+					}, 
+					{
+						text: " which can increase the replayability and quality of the player experience. This can be alps, cities, hills, water, represented throughout the NASA maps that is used to train the SVM with, which can then be added and combined with the diamond square algorithm."
+					}
+				], 
+			}, 
+			{
+				paragraph: [
+					{
+						text: 'The effectiveness for the SVM to produce maps with respect to the training data can be illustrated to some degree on the picture above (there is still a long way to go for representing something like the swiss alps). Also, the increasing blurring that takes place in the different pictures is because of the diamond square algorithm being applied. For this project, three different approaches for map generation with a SVM was tested, including using Blur, Diamond-square and a combination of both. Each approach increases the required processing power significantly."'}
+				], 
+			}, 
+			{
+				img : '/map-generator/results.png'
 			}
 		]
 	},
@@ -316,7 +382,7 @@ const projects = [
 		id: 5, 
 		cover : 'digit-classifier/dataset-small.png',
 		name: 'Digit classifier' ,
-		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning'],
+		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning', 'Image recognition'],
 		role: ['Programmer'], 
 		created_with: ['MatLab'], 
 		collaborators: ['Jeppeh Olsen', 'Mads Anthony'],
@@ -425,7 +491,35 @@ const projects = [
 						text: "Neverending woods is a 2d platformer game that focuses on the relationship between the player and her newly found friend Fella. Ruby has left her home and ventured into the mysterious forrest, where she and Fella must work and play together in order to overcome various challenges."
 					}
 				]
-			}, 
+			},
+			{
+				subtitle: "Gameplay: "
+			},  
+			{
+				paragraph: [
+					{
+						text: "The gameplay is centered around the gadget "
+					},
+					{
+						link: {
+							target: "https://en.wikipedia.org/wiki/Tamagotchi",
+							label: "Tamagotchi"
+						}
+					}, 
+					{
+						text: " and the dark danish award-winning video game "
+					}, 
+					{
+						link: {
+							target: "http://www.playdead.com/games/limbo/",
+							label: 'Limbo'
+						}
+					}, 
+					{
+						text: " where you have to move around like a traditional 2d platformer and pick up objects, in order to advance through the level. Likewise, the player needs to satisfy the little pet 'Fella', in order for it to willingly follow along and help Ruby with challenges that she is unable to complete on her own."
+					},
+				]
+			},
 			{
 				img: "../images/ne-woods/ruby-fella.jpg"
 			}, 
@@ -447,12 +541,22 @@ const projects = [
 		date: 2016, 
 		content:  [
 			{
+				italicText: [
+					{
+						text: "Sorry for the music autoplay! But please listen to this wonderful composed music by Maxime that describes the mood of the game perfectly ."
+					}, 
+				]
+			},
+			{
 				paragraph: [
 					{
 						text: "The Wonky Spacebus is 4 lovely pixelated people on their everyday trip into space in their favourite spacebus. Unfortunately the spacebus has begun leaking, and they have to repair it with whatever materials they can find. The game was created during the 2016 Nordic Game Jam conference in a couple of days, and was a hell of a lot great fun."
 					}
 				]
 			}, 
+			{
+				subtitle: "How to play it: "
+			},
 			{
 				paragraph: [
 					{
@@ -461,18 +565,12 @@ const projects = [
 				]
 			}, 
 			{
-				img: "../images/spacebus/spacebus-small.png"
-			},
-			{
-				italicText: [
-					{
-						text: "Also, please listen to this wonderful composed music by Maxime that describes the mood of the game perfectly ."
-					}, 
-				]
-			},
-			{
 				audio: "../images/spacebus/clip.mp3"
-			} 
+			}, 
+			{
+				img: "../images/spacebus/spacebus-small2.png"
+			},
+
 		]
 	},
 	{
