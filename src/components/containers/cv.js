@@ -24,7 +24,7 @@ class CVPage extends Component {
 		return (
 			<div key={school.id} className="row">
 				<div className="col-sm-11 col-sm-offset-1">
-					<h6>{school.name} {title}</h6>
+					<h6><b>{school.name} {title}</b></h6>
 					<ul className="courses-container">
 						{school.courses.map(this.renderCourse)}
 					</ul>
@@ -33,8 +33,15 @@ class CVPage extends Component {
 		);
 	}
 	renderWorkexperience(experience) {
+		let endYear; 
+		if(experience.endYear == undefined) {
+			endYear = 'present'; 
+		} else {
+			endYear = experience.endYear; 
+		}
+
 		return (
-				<li>{experience.employee} : {experience.role}</li>
+				<li><b>{experience.employee}</b> : {experience.role}   // {experience.startYear} to {endYear}</li>
 		);
 	}
 	render() {

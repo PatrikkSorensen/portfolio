@@ -12,7 +12,9 @@ const initialState = {
 
 export default function(state = initialState, action) {
 	switch (action.type) {
+
 		case ADD_FILTER: 
+		console.log(action.payload); 
 			return {...state, activeFilters: [...action.payload] }
 		case REMOVE_FILTER: 
 			return {...state, activeFilters: [...action.payload] }

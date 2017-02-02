@@ -4,7 +4,7 @@ const projects = [
 		source: "https://github.com/PatrikkSorensen/interactive-braid-evolution",
 		cover : 'iec-braids/comparison-small.png',
 		name: 'Interactive Braid evolution' ,
-		tags: ['Interactive evolition', 'Architecture', 'Augmented Reality', 'Machine Learning', 'Evolutionary algorithms', 'Interaction design', 'Flora Robotica,', 'Compositional Pattern Producing Networks', 'NeuroEvolution'],
+		tags: ['Interactive evolution', 'Architecture', 'Augmented Reality', 'Machine Learning', 'Evolutionary algorithms', 'Interaction design', 'Flora Robotica', 'Compositional Pattern Producing Networks', 'NeuroEvolution'],
 		created_with: ['C#', 'Python', 'Grasshopper', 'Rhinoceros3d', 'UDP', 'NEAT'], 
 		role: ['Programmer', 'Designer'], 
 		collaborators: ['CITA Studio', 'Phil Ayres', 'Sebastian Risi'],
@@ -60,7 +60,10 @@ const projects = [
 				],
 			}, 
 			{
-				img: '/iec-braids/social-garden.jpg'
+				img: {
+					src: '/iec-braids/social-garden.jpg',
+					text: 'figure 1: concept art of the \'social garden\' presented in the ressearch project Flora Robotica.'
+				}
 			}, 
 			{
 				subtitle: 'How it works: '
@@ -80,7 +83,10 @@ const projects = [
 				]
 			}, 
 			{
-				img: '/iec-braids/app-overview.png'
+				img: {
+					src: '/iec-braids/app-overview.png',
+					text: 'figure 2: overview of the application setup and the processes.'
+				}
 			}, 
 			{
 				paragraph: [
@@ -101,7 +107,10 @@ const projects = [
 				]
 			}, 
 			{
-				img: '/iec-braids/lea-interface.png', 
+				img: {
+					src: '/iec-braids/lea-interface.png',
+					text: 'figure 3: The applications LEAP interface where all interaction is done by moving your hands instead of using the keyboard and mouse .'
+				}
 			}, 
 			{
 				subtitle: 'Some of the results: '
@@ -114,10 +123,16 @@ const projects = [
 				]
 			},
 			{
-				img: '/iec-braids/comparison.png'
-			}, 				
+				img: {
+					src: '/iec-braids/comparison.png',
+					text: 'figure 4: Comparison between braids created with interactive braid evolution and from the CITA studio.'
+				}
+			}, 			
 			{
-				img: '/iec-braids/braid-comparison.png'
+				img: {
+					src: '/iec-braids/braid-comparison.png',
+					text: 'figure 5: Example on different modeling layers that can be applied to further represent braided structures.'
+				}
 			}
 		]
 	},
@@ -278,7 +293,10 @@ const projects = [
 				],
 			}, 
 			{
-				img: "/curcuit/line-2.png"
+				img: {
+					src: "/curcuit/line-2.png", 
+					text: 'Figure 4: Example of a puzzle in Curcuit made with the line renderer algorithm. Here, different nodes can be activated in different ways on how the player directs the power flow.'
+				}
 			}, 
 			{
 				videoGallery: ["https://www.youtube.com/v/azY9w9Gl7Q4", "https://www.youtube.com/v/0SmZFX7SnBs", "https://www.youtube.com/v/HjJT8oIAULo"]
@@ -300,16 +318,49 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: 'This project focuses on generating maps, by classifying NASA maps through the supervised learning algorithm: support vector machine. By training a SVM with the NASA maps, it is possible to capture "sections" in the various NASA maps, and use these in order to create more varied and generative maps. The algorithm also uses the diamond-square algorithm to better integrate the different sections of a map with each other.'
+						text: 'This project focuses on generating maps, by classifying '
+					},
+					{
+						link: {
+							target: "http://www2.jpl.nasa.gov/srtm/", 
+							label: "NASA maps"
+						}
+					}, 
+					{
+						text: ' through the supervised learning algorithm '
+					}, 
+					{
+						link: {
+							target: "https://en.wikipedia.org/wiki/Support_vector_machine",
+							label: "Support Vector Machine"
+						}
+					}, 
+					{
+						text: '. By training a SVM with the NASA maps, it is possible to capture patterns in the various NASA maps, and use them to create varied and generative maps. The algorithm also uses the ' 
+					}, 
+					{
+						link: {
+							target: "https://en.wikipedia.org/wiki/Diamond-square_algorithm", 
+							label: "Diamond-aquare algorithm"
+						}
+					}, 
+					{
+						text: " to better integrate partial sections of the map."
 					}
 				], 
 			}, 
 			{
-				img: "/map-generator/svn-trainer.png"
+				img: {
+					src: "/map-generator/svn-trainer.png", 
+					text: "figure 1: different maps produced by the SVM based on the swiss alphes with the Diamond-square algorithm and blur being applied to the output maps."
+				}
 			}, 
 			{
-				img: "/map-generator/map.png"
-			}, 
+				img: {
+					src: "/map-generator/map.png", 
+					text: "figure 2: An example on how some of the maps can look like, once rendered in a game engine."
+				}
+			},  
 			{
 				subtitle: 'Results'
 			}, 
@@ -337,7 +388,10 @@ const projects = [
 				], 
 			}, 
 			{
-				img : '/map-generator/results.png'
+				img : {
+					src: '/map-generator/results.png',
+					text: 'figure 3: The different approaches for training the SVN. '
+				}
 			}, 
 			{
 				paragraph: [
@@ -367,7 +421,7 @@ const projects = [
 				]
 			}, 
 			{
-				img: '/webgl/screenshot.png'
+				img: {src: '/webgl/screenshot.png', text: "figure 1: image of the application. On the top is the weblGL canvas, and on the bottom is different fields that is able to send DOM events to webGL."}
 			},
 			{
 				subtitle: "How it works: "
@@ -396,6 +450,9 @@ const projects = [
 					}, 
 				]
 			}, 
+			{
+				videoGallery: ["https://www.youtube.com/v/VMxwQ-qJMmI", "https://www.youtube.com/v/tJDhtkJnYng"]
+			}
 		]
 	},
 	{
@@ -429,7 +486,7 @@ const projects = [
 				]
 			}, 
 			{
-				img: 'digit-classifier/fft.png'
+				img: {src: 'digit-classifier/fft.png', text: "figure 1: illustration on the effect of applying FFT to digits."}
 			},
 			{
 				subtitle: "Results and reflections: "
@@ -442,7 +499,7 @@ const projects = [
 				] 
 			}, 
 			{
-				img: "digit-classifier/pca-visual.png"
+				img: {src: "digit-classifier/pca-visual.png", text: "figure 2: illustration of clustering by looking at the two dimensions provided by the PCA. Each colour represents a digit."}
 			},
 			{
 				paragraph: [
@@ -459,10 +516,10 @@ const projects = [
 				] 
 			}, 
 			{
-				img: "digit-classifier/comparison-table.png"
+				img: {src: "digit-classifier/comparison-table.png", text: "figure 3: comparison on the results. Most notably, the FFT preprocessing has a negative effect, and our kNN achieves the highest accuracy"}
 			}, 
 			{
-				img: "digit-classifier/learning-curve.png"
+				img: {src: "digit-classifier/learning-curve.png", text: "figure 4: Illustration of Matlabs native ANN function and the learning curve."}
 			}, 
 		]
 	},

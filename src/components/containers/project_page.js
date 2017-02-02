@@ -27,7 +27,7 @@ class ProjectList extends Component {
 		let tags = this.convertArrayToCSVString(project.tags); 
 		let roles = this.convertArrayToCSVString(project.role); 
 		let collaborators = this.convertArrayToCSVString(project.collaborators); 
-
+		let created_with = this.convertArrayToCSVString(project.created_with); 
 		return <Project 
 					key={project.id} 
 					id={project.id} 
@@ -38,6 +38,7 @@ class ProjectList extends Component {
 					collaborators={collaborators}
 					source={project.source}
 					year={project.date}
+					created_with={created_with}
 				/> 
 	}
 	render() {

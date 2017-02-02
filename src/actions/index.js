@@ -18,8 +18,22 @@ import projects from './projects';
 
 
 let filters = []; 
-let selectOptions = projects.map(project => {
-	return { label: project.name, value: project.name }; 
+let tags = []; 
+for(let i = 0; i < projects.length; i++){
+	for(let j = 0; j < projects[i].tags.length; j++) {
+		let string = projects[i].tags[j]; 
+		if(!tags.includes(string.toLowerCase())){
+			tags.push(string.toLowerCase()); 
+		}
+	}
+	tags.push(projects[i].name); 
+}
+
+let selectOptions = tags.map(tag => {
+	return { 
+		label: tag, 
+		value: tag 
+	}; 
 }); 
 
 export function toggleProject(id) {
@@ -63,6 +77,7 @@ export function getFilters() {
 }
 
 export function addFilter(tag) {
+	console.log("add filter", tag.label); 
 	filters.push(tag.label); 
 	return {
 		payload: filters, 

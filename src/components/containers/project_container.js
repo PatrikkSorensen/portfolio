@@ -5,20 +5,32 @@ import CardProject from '../card_project';
 import SearchField from '../search_field'; 
 
 function compareStrings(str1, str2) {   
+    if(str1 == undefined || str2 == undefined){
+      return true; 
+    }
+
     return str1.toUpperCase() === str2.toUpperCase();
 }
 
 function filterProjectsByTags(filters, tags) {
-  console.log("Filters and tags, ", filters, tags);
+
   for(let i = 0; i < filters.length; i++){
       for(let j = 0; j < tags.length; j++) {
-        if(compareStrings(filters[i], tags[j])) {
-            return true; 
+        if(compareStrings(filters[i], tags[j])){
+          return true;
         }
       }
     }
 
   return false; 
+}
+
+function filterProjectsByNames(filters, name) {
+  for(let i = 0; i < filters.length; i++){
+      if(filters[i] == name) {
+        return true; 
+      }
+  }
 }
 
 class ProjectContainer extends Component {
@@ -28,16 +40,24 @@ class ProjectContainer extends Component {
 
   filterProjects() {
     let filteredProjects = []; 
-
+    let arr1 = []; 
+    let arr2 = []; 
 
     if(this.props.filters.length > 0){
-        filteredProjects = this.props.projects.filter(function(project) {
-            return filterProjectsByTags(this.props.filters, [project.name]); ;         
+        arr1 = this.props.projects.filter(function(project) {
+            return  filterProjectsByTags(this.props.filters, project.tags);         
         }.bind(this));
+
+        arr2 = this.props.projects.filter(function(project) {
+            return  filterProjectsByNames(this.props.filters, project.name);         
+        }.bind(this));
+        
+        filteredProjects = arr1.concat(arr2); 
     } else {
       filteredProjects = [...this.props.projects]; 
     }
 
+    console.log("Filtered projects...", filteredProjects.length); 
     return filteredProjects
   }
 
@@ -54,7 +74,7 @@ class ProjectContainer extends Component {
         container[i] = this.renderThreeProjects(i); 
     }
 
-    for(j = 0; j < cardProjects.length - i - j; j++) {
+    for(j = 0; j <= cardProjects.length - i - j; j++) {
       remainders[j] = this.renderCardProject(cardProjects[i + j], "col-sm-4");
     }
 
@@ -91,8 +111,10 @@ class ProjectContainer extends Component {
   }
 
   renderCardProject(project, className) {  
-    //console.log("render card projects", project); 
-    //let tags = project.tags.map((tag) => tag + " "); 
+    if(project === undefined) {
+      return; 
+    }
+    
     let tags = project.tags.join(', ') + '.'; 
     return (
       <span className={className} key ={"span-" + project.id}>

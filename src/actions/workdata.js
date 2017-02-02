@@ -2,7 +2,8 @@ const workExperience = [
 	{
 		id: 0,
 		employee: 'Italo Wines Only',
-		years: 2013,
+		startYear: 2013,
+		endYear: 2013,
 		from: 1, 
 		to: 4,
 		role: "freelance fullstack webdeveloper",
@@ -11,7 +12,8 @@ const workExperience = [
 	{
 		id: 1,
 		employee: 'Birks el-service Aps',
-		years: 2012,
+		startYear: 2012,
+		endYear: 2012,
 		from: 1, 
 		to: 4,
 		role: "freelance fullstack webdeveloper",
@@ -20,7 +22,8 @@ const workExperience = [
 	{
 		id: 1, 
 		employee: 'Odense kommune',
-		years: 2015,
+		startYear: 2015,
+		endYear: undefined,
 		from: 1, 
 		to: undefined, 
 		role: "disabled carer substitute and assistant secretary",
@@ -29,7 +32,8 @@ const workExperience = [
 	{
 		id: 2,
 		employee: 'Røde Kors: Solskinsunge Odense',
-		years: 2014,
+		startYear: 2014,
+		endYear: 2015,
 		from: 1, 
 		to: 8,
 		role: "Mentor",

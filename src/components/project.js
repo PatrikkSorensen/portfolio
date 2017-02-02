@@ -24,13 +24,13 @@ class Project extends Component {
 		</div>
 		);
 	}
-	renderImage(src) {
+	renderImage(image) {
 		return (
 			<div key={id} className="row">
-				<div className="col-sm-8 col-sm-offset-2">
+				<div style={{float: 'none'}} className="col-sm-6 center-block">
 					<figure>
-						<img src={"http://localhost:8080/images/" + src } width="600px" className="center-block" /> 
-						<figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
+						<img src={"http://localhost:8080/images/" + image.src } width="600px"/> 
+						<figcaption>{image.text}</figcaption>
 					</figure>
 				</div>
 			</div>
@@ -89,7 +89,7 @@ class Project extends Component {
 		let videos = array.map(function(url) {
 			return (
 				<div className="col-sm-4">
-					<iframe width="300" height="250" src={url}></iframe>
+					<iframe width="350" height="300" src={url}></iframe>
 				</div>
 			);
 		});
@@ -147,6 +147,10 @@ class Project extends Component {
 								{this.props.collaborators}
 							</p>
 							{source}
+							<p>
+								<span className="meta-label">Made with: </span> 
+								{this.props.created_with}
+							</p>
 							<p>
 								<span className="meta-label">Tags: </span> 
 								<i>{this.props.tags}</i>
