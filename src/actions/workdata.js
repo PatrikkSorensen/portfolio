@@ -1,5 +1,6 @@
 const workExperience = [
 	{
+		id: 0,
 		employee: 'Italo Wines Only',
 		years: 2013,
 		from: 1, 
@@ -8,6 +9,7 @@ const workExperience = [
 		description: "Freelance job for creating a website for the wine company ItaloWinesOnly."
 	},
 	{
+		id: 1,
 		employee: 'Birks el-service Aps',
 		years: 2012,
 		from: 1, 
@@ -16,6 +18,7 @@ const workExperience = [
 		description: "Freelance job for creating a website for the electrician company Birks el-service Aps."
 	}, 
 	{
+		id: 1, 
 		employee: 'Odense kommune',
 		years: 2015,
 		from: 1, 
@@ -24,6 +27,7 @@ const workExperience = [
 		description: "Manages a team of 6 disabled carers and substitutes them if absoloutly neccasary", 
 	}, 
 	{
+		id: 2,
 		employee: 'Røde Kors: Solskinsunge Odense',
 		years: 2014,
 		from: 1, 

@@ -96,7 +96,8 @@ export function getSearchOptions() {
 export function getCourses() {
 	return {
 		payload : Schools, 
-		selfstudySchools: SelfStudySchools,
+		WorkExperienceData,
+		selfstudySchools : SelfStudySchools,
 		type: GET_COURSES
 	}
 }

@@ -4,7 +4,8 @@ import {
 
 const initialState = {
 	schools: [], 
-	selfstudySchools: []
+	selfstudySchools: [], 
+	workExperience: []
 }
 
 let projects = []; 
@@ -14,8 +15,8 @@ export default function(state = initialState, action) {
 		case GET_COURSES:
 			return {
 				schools: action.payload, 
-				selfstudySchools: action.selfstudySchools
-
+				selfstudySchools: action.selfstudySchools,
+				workExperience: action.WorkExperienceData
 			};
 	}
 

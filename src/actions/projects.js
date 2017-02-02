@@ -332,12 +332,20 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: 'The effectiveness for the SVM to produce maps with respect to the training data can be illustrated to some degree on the picture above (there is still a long way to go for representing something like the swiss alps). Also, the increasing blurring that takes place in the different pictures is because of the diamond square algorithm being applied. For this project, three different approaches for map generation with a SVM was tested, including using Blur, Diamond-square and a combination of both. Each approach increases the required processing power significantly."'}
+						text: 'The effectiveness for the SVM to produce maps with respect to the training data can be illustrated to some degree on the picture above (there is still a long way to go for caputuring the pattern that exists in something like the swiss alps). Also, the increasing blurring that takes place in the different pictures is because of the diamond square algorithm being applied. For this project, three different approaches for map generation with a SVM was tested, including using Blur, Diamond-square and a combination of both. Each approach increases the required processing power significantly."'
+					}
 				], 
 			}, 
 			{
 				img : '/map-generator/results.png'
-			}
+			}, 
+			{
+				paragraph: [
+					{
+						text: 'While the blur is able to predict values more quickly than the Diamond-Square and the combination both, the result quickly becomes uninteresting because the map is being flattening out. The diamond-square algorithm on the other side, takes a very large time to train the SVM to create predictions, hence the combination is seen as the best approach for this project. Since Diamond-Square is able to capture some patterns to some degree, and then integrate these partial maps into each other when producing new maps, the results become a bit more interesting and quicker to produce.'
+					}
+				], 
+			}, 
 		]
 	},
 	{
@@ -359,6 +367,19 @@ const projects = [
 				]
 			}, 
 			{
+				img: '/webgl/screenshot.png'
+			},
+			{
+				subtitle: "How it works: "
+			},
+			{
+				paragraph: [
+					{
+						text: "The projects scene graph is essentially a nodegraph, where we add transformation to each node on the graph with the child-parent relationships in mind. For instance, when a top-level node is rotated, scaled or translated, the children should recieve the same transformations. In this project, this is illustrated by the different rendered pyramids. Here, the center pyramid is the top root node, while having a smaller pyramid as a child, which also has a smaller pyramid as a child. Each pyramid is then applied with rotation and translating transformations which is progressed through the children of the node as well."
+					}, 
+				]
+			}, 
+			{
 				paragraph: [
 					{
 						text: "The webGL canvas can also listen to events from the DOM (e.g. a textfield), and use these values in the shader, or by adding transformation to the elements."
@@ -366,16 +387,15 @@ const projects = [
 				]
 			}, 
 			{
-				img: '/webgl/screenshot.png'
-			},
+				subtitle: "Listening to DOM events: "
+			}, 
 			{
 				paragraph: [
 					{
-						text: "The projects scene graph is essentially a nodegraph, where we add transformation to each node on the graph with the child-parent relationships in mind. For instance, when a top-level node is rotated, scaled or translated, the children should recieve the same transformation."
+						text: "The project also explores how DOM events can be integrated into manipulating the webGL canvas. To explore this, a text-field is added serving as an editor for the fragment shader, while an HTML formular is added that sends tranformation events recived by the webGL program. The HTML fields then needs to referenced by webGL, and will then listen to the specified events during runtime. Additionally, this can easily be extended to mouse and keyboard events, and/or retrieved data from something else (e.g. time)"
 					}, 
 				]
 			}, 
-
 		]
 	},
 	{
@@ -396,9 +416,6 @@ const projects = [
 				]
 			}, 
 			{
-				img: "digit-classifier/pca-visual.png"
-			},
-			{
 				paragraph: [
 					{
 						text: "pre-processing of data is handled by Fourier Transformation, clustering is achieved through Principal Component Analysis to reduce the amount of dimensions, K-nearest neighbour and Artificial Neural Networks are used as classification algorithms, and k-fold cross-validation is used to validate our results. In the end, we get an accuracy of 94% with K-nearest neightbour and 96% with artificial neural networks. For a list of the current state of the art of recognizing new handwritten digits by using the MNIST dataset, see "
@@ -410,6 +427,42 @@ const projects = [
 						}
 					},
 				]
+			}, 
+			{
+				img: 'digit-classifier/fft.png'
+			},
+			{
+				subtitle: "Results and reflections: "
+			},
+			{
+				paragraph: [
+					{
+						text: "A picture of the clustering through the PCA can be seen below in which the amount of dimensions is reduced to 2 from 784 (here, each dimension is a pixel value) by using the PCA algorithm. Here, each color represents a digit, e.g. the color represents the digit '7'. This figure shows that while some digits can be very easy to cluster in same group (e.g. the value of '1'), a value like '6' or '4' can vary more in terms of their different pixels dimensions."
+					}, 
+				] 
+			}, 
+			{
+				img: "digit-classifier/pca-visual.png"
+			},
+			{
+				paragraph: [
+					{
+						text: "During training we perform multiple experiments: with or without FFT preprocessing, and with the K-means and/or ANN classification, leading to four experiments in total. It is interesting that after we validate and test the classification algorothms, that the simplicity of kNN seems to perform better than Matlabs built-in ANN function, while also being influenced half as much by the FFT preprocessing." 
+					}, 
+				] 
+			}, 
+			{
+				paragraph: [
+					{
+						text: "The next point raises the question on how useful the FFT is for the MNIST dataset, which in this case has a negative impact on the precision on both approaches. This can illustrate first and foremost the 'pureness' of the MNIST dataset, and how the dataset itself can influence the prcesision. But this is something that can be hard to predict, and needs to be properly tested before discarding a specific preprocessing technique such as FFT."
+					}, 
+				] 
+			}, 
+			{
+				img: "digit-classifier/comparison-table.png"
+			}, 
+			{
+				img: "digit-classifier/learning-curve.png"
 			}, 
 		]
 	},

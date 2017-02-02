@@ -32,10 +32,23 @@ class CVPage extends Component {
 			</div>
 		);
 	}
+	renderWorkexperience(experience) {
+		return (
+				<li>{experience.employee} : {experience.role}</li>
+		);
+	}
 	render() {
 		return (
 		<Layout>
 			<div className="cv-page">
+				<div className="row">
+					<div className="col-sm-6 col-sm-offset-1">
+						<h2>Work experience: </h2>
+						<ul>
+							{this.props.workExperience.map(this.renderWorkexperience.bind(this))}
+						</ul>
+					</div>
+				</div>
 				<div className="row">
 					<div className="col-sm-4 col-sm-offset-1">
 						<h2>Education: </h2>
@@ -55,8 +68,9 @@ class CVPage extends Component {
 }
 
 function mapStateToProps(state) {
-	//console.log("cv maptstatetoprops", state.cv); 
+	console.log("cv maptstatetoprops", state.cv); 
 	return { 
+		workExperience : state.cv.workExperience,
 		schools : state.cv.schools, 
 		selfstudySchools: state.cv.selfstudySchools
 	}; 
