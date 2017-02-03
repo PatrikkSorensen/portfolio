@@ -5,7 +5,7 @@ const projects = [
 		cover : 'iec-braids/comparison-small.png',
 		name: 'Interactive Braid evolution' ,
 		tags: ['Interactive evolution', 'Architecture', 'Augmented Reality', 'Machine Learning', 'Evolutionary algorithms', 'Interaction design', 'Flora Robotica', 'Compositional Pattern Producing Networks', 'NeuroEvolution'],
-		created_with: ['C#', 'Python', 'Grasshopper', 'Rhinoceros3d', 'UDP', 'NEAT'], 
+		created_with: ['C#', 'Python', 'Grasshopper', 'Rhinoceros3d', 'UDP', 'NEAT', '.NET', 'File I/O'], 
 		role: ['Programmer', 'Designer'], 
 		collaborators: ['CITA Studio', 'Phil Ayres', 'Sebastian Risi'],
 		date: 2016, 
@@ -141,8 +141,8 @@ const projects = [
 		source: "https://github.com/PatrikkSorensen/interactive-mario-evolution",
 		cover : 'iec-mario/mario-small.png',
 		name: 'Evolving Mario controllers' ,
-		tags: ['Machine learning', 'Interactive Evolution', 'Super Mario', 'Game AI', 'User-evolved behaviours', 'NeuroEvolution'],
-		created_with: ['Java', 'File I/O', 'Java swing', 'ANJI'], 
+		tags: ['Machine learning', 'Interactive Evolution', 'Super Mario', 'Game AI', 'User-evolved behaviours', 'NeuroEvolution', 'Artificial Neural Networks'],
+		created_with: ['Java', 'File I/O', 'Java swing', 'ANJI', 'JGAP'], 
 		role: ['Programmer', 'Designer'], 
 		collaborators: ['Jeppeh Olsen', 'Sebastian Risi'],
 		date: 2015, 
@@ -211,7 +211,7 @@ const projects = [
 		cover : 'curcuit/curcuit-small.png',
 		name: 'Curcuit',
 		source: "https://github.com/PatrikkSorensen/GAMEDEV2016", 
-		tags: ['Game Development', 'Innovative Controls', '3d adventure',' Journey meets Brothers', 'Simplicity', 'Alone together', 'Motherboard prophecy'],
+		tags: ['Game Development', 'Innovative Controls', '3d adventure', 'Alone together', 'Motherboard prophecy', 'Algorithmic thinking'],
 		created_with: ['Unity', 'C#'], 
 		role: ['Lead Programmer', 'VFX artist', 'Story Narrator', 'Animator', 'Gameplay Programmer'], 
 		collaborators: ['Anastasios Tsiokidis', 'Anton Forchhammer', 'Jesper Bendtsen', 'Jonas Jeppesen'],
@@ -309,8 +309,8 @@ const projects = [
 		cover : 'map-generator/map-small.png',
 		name: 'Classifying NASA maps to create other maps' ,
 		source: "https://github.com/PolygeneLubricants/GAER-F2015",
-		tags: ['Machine Learning', 'Support Vector Machine', ' Diamond-square algorithm', 'Evolutionary Algorithm', 'Map generation', 'Procedural content', 'Supervised Learning'],
-		created_with: ['Java'], 
+		tags: ['Machine Learning', 'Support Vector Machine', ' Diamond-square algorithm', 'Map generation', 'Procedural content', 'Supervised Learning'],
+		created_with: ['Java', 'Image parsing'], 
 		role: ['Programmer'], 
 		collaborators: ['Jeppeh Olsen', 'Andreas Christiansen'],
 		date: 2015, 
@@ -407,7 +407,7 @@ const projects = [
 		cover : 'webgl/webgl-small.png',
 		name: 'CoffeGraph : webGL meets coffescript' ,
 		source: undefined,
-		tags: ['WebGL', 'Graphics programming', 'Graph system', 'Node based architecture', 'Web Development'],
+		tags: ['WebGL', 'Graphics programming', 'Node graph architecture', 'Web Development'],
 		role: ['Programmer'], 
 		created_with: ['Javascript', 'CoffeeScript', 'requireJS'], 
 		collaborators: ['Jeppeh Olsen', 'Malena Klaus'],
@@ -461,7 +461,7 @@ const projects = [
 		name: 'Digit classifier' ,
 		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning', 'Image recognition'],
 		role: ['Programmer'], 
-		created_with: ['MatLab'], 
+		created_with: ['MatLab', 'Image parsing'], 
 		collaborators: ['Jeppeh Olsen', 'Mads Anthony'],
 		date: 2015, 
 		content:  [
@@ -696,33 +696,37 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "During my studies on my Bachelor, i created two websites froms scratch for two different companies. The websites was implemented with bootstrap, PHP, javascript and wordpress, and several artwork and visual components that had to be integrated to the websites. Creating and fitting images to the websites was likewise a part of the job."
+						text: "During my studies on my Bachelor, i created two websites from scratch for two different companies. The websites was implemented with bootstrap, PHP, javascript and wordpress, and several artwork and visual components that had to be integrated to the websites. Creating and fitting images to the websites was likewise a part of the job."
 					}
 				]
 			}, 
 			{
-				img: "../images/websites/itwine-about.png"
+				subtitle: "Italo Wines Only:"
 			},
 			{
 				paragraph: [
 					{
-						text: "For the website of ItaloWinesOnly a plugin was also created for wordpress, where the users could add, remove, and edit existing wines and winehouses to the databases. This plugin featured live previewing, and several error handling and user friendly when creating new entries on the website."
+						text: "For the website of ItaloWinesOnly a plugin was also created for wordpress, where the users could add, remove, and edit existing wines and winehouses to the databases. This plugin featured live previewing, and several error handling and user friendly techniqes when a user had to create new entries on the website. This assignment was particular interesting because of the various techniques that could be implemented as a part of the CMS. Since Wordpress offered a good interface for a non-expert to create new content in, the plugin served as an familiar tool that italowinesonly could extend their wine catalogue from."
 					}
 				]
 			}, 
+			{
+				gallery: [
+					'websites/itwine-about.png', 'websites/itwine-front.png', 'websites/itwine-wines.png']
+			}, 
+			{
+				subtitle: "Birks el-service Aps: "
+			},
 			{
 				paragraph: [
 					{
-						text: "Birks el-service Aps on the other hand, was more interested in creating a renting feature, where users could browse through different electrician parts that could be rented out, which was achieved largely by using jquery and other carousel / rotator plugins."
+						text: "Birks el-service Aps on the other hand, was my first website in which i focused more on the visual assets that had to be produced, compared to the relatively simple code that has the mark up information in particular bootstrap and css classes classes. A renting feature was also implemented,  where customers could browse through different electrician parts that could be rented out, which was achieved largely by using jquery and other carousel / rotator plugins."
 					}
 				]
 			}, 
 			{
-				img: "../images/websites/birksel-front.png"
+				img: {src: "../images/websites/birksel-front.png", text: undefined}
 			}, 
-			{
-				img: "../images/websites/itwine-wines.png"
-			}
 		]
 	}, 
 	{

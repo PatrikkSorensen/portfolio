@@ -6,7 +6,7 @@ class SearchBar extends Component {
 		return(
 			<Select 
 			    {...this.props}
-			    placeholder="Search by title..."
+			    placeholder="Search by title or tags..."
 			    value={this.props.input.value}
 			    onChange={(value) => this.props.input.onChange(value)}
 			    onBlur={() => this.props.input.onBlur(this.props.input.value)}

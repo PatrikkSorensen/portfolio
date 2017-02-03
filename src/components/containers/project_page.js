@@ -21,6 +21,9 @@ class ProjectList extends Component {
 		}
 	}
 	convertArrayToCSVString(array) {
+		if(array === undefined) {
+			return; 
+		}
 		return array.join(', ') + '.'; 
 	}
 	renderProject(project) {
