@@ -564,7 +564,7 @@ const projects = [
 				]
 			}, 
 			{
-				img: "fidusia/book-cover.jpg"
+				img: {src: "fidusia/book-cover.jpg", text: "Figure 1: Celia Pearces great book: 'Communities of Play'. A great book on how to create communities centered around playing, which was referenced several times in my Bachelor project." }
 			}, 
 		]
 	},
@@ -631,10 +631,10 @@ const projects = [
 				]
 			},
 			{
-				img: "../images/ne-woods/ruby-fella.jpg"
+				img: {src: "../images/ne-woods/ruby-fella.jpg", text: "Figure 1: Ruby must carry lodges so that Fella can follow Ruby through the forrest."}
 			}, 
 			{
-				img: "../images/ne-woods/trapped-fella.png"
+				img: {src: "../images/ne-woods/trapped-fella.png", text: "Figure 2: Ruby and Fellas first encounter. Fella is trapped, cold and hungry and needs a friend to help him out."}
 			}, 
 		]
 	},
@@ -660,7 +660,7 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "The Wonky Spacebus is 4 lovely pixelated people on their everyday trip into space in their favourite spacebus. Unfortunately the spacebus has begun leaking, and they have to repair it with whatever materials they can find. The game was created during the 2016 Nordic Game Jam conference in a couple of days, and was a hell of a lot great fun."
+						text: "The Wonky Spacebus is 2-4 lovely pixelated people on their everyday trip into space in their favourite spacebus. Unfortunately the spacebus has begun leaking, and they have to repair it with whatever materials they can find. The game was created during the 2016 Nordic Game Jam conference in a couple of days, and was a hell of a lot great fun."
 					}
 				]
 			}, 
@@ -678,7 +678,7 @@ const projects = [
 				audio: "../images/spacebus/clip.mp3"
 			}, 
 			{
-				img: "../images/spacebus/spacebus-small2.png"
+				video: "https://www.youtube.com/v/_IIZyZDKXGs"
 			},
 
 		]
