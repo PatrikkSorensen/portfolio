@@ -23,11 +23,9 @@ class SearchField extends Component {
 		return(
 			<div className="search-container">
 				<div className="row search-field">
-					<div className="col-sm-6 col-sm-offset-3">
-			        	<span className="col-sm-12">
-			        		<Field onChange={addFilter}  name="tag" options={this.props.searchOptions} component={SearchBar}/>
-			        	</span>
-				    </div>
+					<div className="col-sm-6">
+		        		<Field onChange={addFilter}  name="tag" options={this.props.searchOptions} component={SearchBar}/>
+	        		</div>
 			    </div>
 			    <div className="row">
 			    	<div className="col-sm-offset-3 tag-container">

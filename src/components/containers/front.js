@@ -15,7 +15,7 @@ class FrontPage extends Component {
 		if(project) {
 		let tags = project.tags.join(', ') + '.'; 
 		return (
-			<span className={className}> 
+			<span key={project.id} className={className}> 
 				<CardProject imgPath={project.cover} name={project.name} tags={tags} onClick={() => this.props.onClick(project.id)}/> 
 			</span>
 		);
@@ -38,27 +38,23 @@ class FrontPage extends Component {
 	render() {
 		return (
 		<Layout>
-
 			<div className="welcome-container">
 				<div className="row">
-						<div className="col-lg-2 col-lg-offset-5">
-							<h1 style={{textAlign: "center"}}>Hello,</h1>
-						</div>
+					<div className="col-sm-8 col-sm-offset-2">
+						<h1>Portfolio of Patrikk Dyrberg Sørensen</h1>
+					</div>
 				</div>
 				<div className="row">
-					<div className="col-lg-6 col-lg-offset-3">
+					<div className="col-lg-8 col-sm-offset-2">
 						<p>Having taken a bachelor degree in <b>interaction design</b> and a master degree in <b>games technology</b>, i have ventured into the great world of experimental video games, web development, graphics programing and machine learning.</p>
 					</div>
 				</div>
 			</div>
 			<div className="showcase-container">
 				<div className="row"> 
-					{this.renderFirstRow()}
-				</div>
-				<div className="row">
-					<div className="col-lg-12">
-						<Link to="/projects"><p><i>more projects here...</i></p></Link>
-					</div>
+						<div className="row">
+							{this.renderFirstRow()}
+						</div>
 				</div>
 			</div>
 		</Layout>

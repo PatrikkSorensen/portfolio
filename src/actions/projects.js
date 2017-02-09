@@ -60,6 +60,9 @@ const projects = [
 				],
 			}, 
 			{
+				video: "https://www.youtube.com/v/txp8WJTmRFI"
+			}, 
+			{
 				img: {
 					src: '/iec-braids/social-garden.jpg',
 					text: 'figure 1: concept art of the \'social garden\' presented in the ressearch project Flora Robotica.'
@@ -133,7 +136,10 @@ const projects = [
 					src: '/iec-braids/braid-comparison.png',
 					text: 'figure 5: Example on different modeling layers that can be applied to further represent braided structures.'
 				}
-			}
+			},
+			{
+				video: "https://www.youtube.com/v/GUpy6vYiXxg"
+			}, 
 		]
 	},
 	{
@@ -683,7 +689,7 @@ const projects = [
 
 		]
 	},
-	{
+	/*{
 		id: 9, 
 		cover : 'websites/website-small.png',
 		name: 'Websites' ,
@@ -764,7 +770,7 @@ const projects = [
 				]
 			}, 
 		]
-	}
+	}*/
 ]
 
 export default projects; 

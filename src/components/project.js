@@ -15,10 +15,10 @@ class Project extends Component {
 				return <a href={field.link.target}>{field.link.label}</a>
 			}
 		});
-		console.log("Final contents, ", contents); 
+
 		return (
 		<div className="row">
-			<div className="col-sm-12">
+			<div className="col-sm-10">
 					<p>{contents}</p>
 			</div>
 		</div>
@@ -27,9 +27,9 @@ class Project extends Component {
 	renderImage(image) {
 		return (
 			<div key={id} className="row">
-				<div style={{float: 'none'}} className="col-sm-6 center-block">
+				<div style={{float: 'none', marginBottom: '20', marginTop: '20'}} className="col-sm-8">
 					<figure>
-						<img src={"http://localhost:8080/images/" + image.src } width="600px"/> 
+						<img src={"http://www.dobbeltk.dk/images/" + image.src } width="600px"/> 
 						<figcaption>{image.text}</figcaption>
 					</figure>
 				</div>
@@ -62,7 +62,7 @@ class Project extends Component {
 		return (
 			<div className="row">
 				<div className="col-sm-12">
-					<iframe width="420" height="345" src={url}></iframe>
+					<iframe width="420" height="400" src={url}></iframe>
 				</div>
 			</div>
 		)
@@ -77,7 +77,7 @@ class Project extends Component {
 	}
 	renderGallery(array) {
 		let images = array.map(function(image) {
-			return <div className="col-md-4"><img src={"http://localhost:8080/images/" + image } width="300px"/></div>
+			return <div className="col-md-4"><img src={"http://www.dobbeltk.dk/images/" + image } width="300px"/></div>
 		});
 		return (
 			<div className="row">
@@ -134,8 +134,8 @@ class Project extends Component {
 		return(
 			<div>
 				<div className="row">
-					<div className="col-sm-8 col-sm-offset-2 post-container">
-						<h4>{this.props.name}</h4>
+					<div className="col-sm-10 post-container">
+						<h1>{this.props.name}</h1>
 						<span className="glyphicon glyphicon-time">Finished on {this.props.year}</span>
 						<div className="project-meta-info">
 							<p>

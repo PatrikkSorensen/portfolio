@@ -1,22 +1,24 @@
 import {
-	GET_COURSES, 
+	GET_CV, 
 } from '../actions/types'; 
 
 const initialState = {
 	schools: [], 
 	selfstudySchools: [], 
-	workExperience: []
+	workExperience: [], 
+	skills: []
 }
 
 let projects = []; 
 
 export default function(state = initialState, action) {
 	switch (action.type) {
-		case GET_COURSES:
+		case GET_CV:
 			return {
 				schools: action.payload, 
 				selfstudySchools: action.selfstudySchools,
-				workExperience: action.WorkExperienceData
+				workExperience: action.WorkExperienceData, 
+				skills: action.skills 
 			};
 	}
 

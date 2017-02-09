@@ -57,7 +57,6 @@ class ProjectContainer extends Component {
       filteredProjects = [...this.props.projects]; 
     }
 
-    console.log("Filtered projects...", filteredProjects.length); 
     return filteredProjects
   }
 
@@ -83,7 +82,7 @@ class ProjectContainer extends Component {
         <div className="projects-container">
           {container}
           <div className="row">
-            <div className="col-sm-10 col-sm-offset-1" >
+            <div className="col-sm-12 col-sm-offset-1" >
               <div className="row">
                 {remainders}
               </div>
@@ -102,11 +101,7 @@ class ProjectContainer extends Component {
 
     projects = [p1, p2, p3]; 
     return (
-      <div className="row" key={"row-" + id}>
-        <div className="col-sm-10 col-sm-offset-1" key={"column-" + id}>
-          <div className="row" key={"div- " + id}>{ projects } </div>
-        </div>
-      </div>
+          <div className="row card-row" key={"div- " + id}>{ projects } </div>
     );
   }
 

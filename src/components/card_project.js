@@ -3,10 +3,11 @@ import React, { PropTypes } from 'react'
 const CardProject = ({onClick, name, tags, imgPath }) => (
     <div className="card card-block">
       <a className="card-link" onClick={onClick}>
-      	<img src={'images/' + imgPath} className="center-block img-responsive" width="350px" />
-          <h3 className="card-title">{name}</h3>
+      	<img src={'images/' + imgPath} className="img-fluid" width="400px" />
+          <p className="project-title">{name}</p>
           <p><i>{tags}</i></p>
       </a>
+      <button type="button" onClick={onClick} className="btn btn-primary">Read more</button>
     </div>
 )
 

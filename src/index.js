@@ -28,4 +28,4 @@ ReactDOM.render(
         <Route path="cv" component={CVPage} />
         </Router>
   </Provider>
-  , document.querySelector('.container-fluid'));
+  , document.querySelector('.content'));

@@ -3,18 +3,25 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import ReactAudioPlayer from 'react-audio-player'; 
 
 export default () =>       
-<div className="row">
-	<nav className="navbar no-radius navbar-default navbar-static-top">
-	  <div className="navbar-inner">
-  		  <div className="col-sm-4 col-sm-offset-1">
-	      	<Link className="first" to="/">Patrikk Dyrberg Sørensen</Link>
-	      	<p>interaction designer | programmer</p>
-	      </div>
-	      <div className="col-sm-4 col-sm-offset-3 headerlinks">
-		      <Link to="/projects">PROJECTS</Link>
-		      <Link to="/about">ABOUT</Link>
-		      <Link to="/cv">CV</Link>
-	      </div>
-	  </div>
-	</nav>
-</div>
+<nav className="navbar navbar-default navbar-static-top">
+	<div className="container">
+	    <div className="navbar-inner">
+			<div className="row">
+				<div className="col-sm-4">
+					<Link to="/">Patrikk Dyrberg Sørensen</Link>
+				</div>
+			</div>
+			<div className="row">
+				<div className="col-sm-4">
+		  	      	<p>interaction designer | programmer</p>
+				</div>
+				<div style={{float : 'right'}} className="col-sm-4 col-sm-offset-4 headerlinks">
+					<Link to="/">HOME</Link>
+					<Link to="/projects">PROJECTS</Link>
+					<Link to="/about">ABOUT</Link>
+					<Link to="/cv">CV</Link>
+			    </div>
+			</div>
+		</div>
+   </div>
+</nav>

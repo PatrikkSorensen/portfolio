@@ -5,12 +5,12 @@ const courses = [
 		description: "The MOOC.fi delivers some very solid and and hands-on programming courses which has greatly expanded my programming skills and understanding on how to become a better programmer.",
 		courses: [
 			{
-				name : "Alto C", 
+				name : "Alto C course: learning the C programming language", 
 				year: 2015, 
 				month: "July"
 			}, 
 			{
-				name: "Cyber Security Base with F-Secure  ( Currently taking this course )",
+				name: "Cyber Security Base with F-Secure  ( ONGOING )",
 				year: undefined
 			}
 		]

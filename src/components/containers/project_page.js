@@ -50,7 +50,7 @@ class ProjectList extends Component {
 			content = 	(
 			<div>
 				<div className="row project-page">
-					<div className="col-sm-10 col-sm-offset-1">
+					<div className="col-sm-10">
 						<h1>Projects</h1>
 					</div>
 				</div>
@@ -75,7 +75,6 @@ class ProjectList extends Component {
 }
 
 function mapStateToProps(state) {
-	//console.log("Projects page: MapStateToProps", state.projects); 
 	return { 
 		projects : state.projects.projects, 
 		filters: state.filters.activeFilters
@@ -85,7 +84,6 @@ function mapStateToProps(state) {
 const mapDispatchToProps = {
 	fetchProjects,
 	fetchProject,
-	onClick: toggleProject
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectList)

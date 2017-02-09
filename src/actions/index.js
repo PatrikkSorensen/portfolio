@@ -7,7 +7,7 @@ import {
 	REMOVE_FILTER,
 	CLEAR_FILTERS,
 	GET_SEARCH_OPTIONS, 
-	GET_COURSES
+	GET_CV
 } from './types'; 
  
 import {browserHistory, Router} from 'react-router';
@@ -15,10 +15,14 @@ import Schools from './courses';
 import SelfStudySchools from './selfstudy_data'; 
 import WorkExperienceData from './workdata'; 
 import projects from './projects'; 
-
+import Skills from './skills'; 
 
 let filters = []; 
 let tags = []; 
+
+
+console.log("final array: ", Skills); 
+
 for(let i = 0; i < projects.length; i++){
 	for(let j = 0; j < projects[i].tags.length; j++) {
 		let string = projects[i].tags[j]; 
@@ -35,6 +39,8 @@ let selectOptions = tags.map(tag => {
 		value: tag 
 	}; 
 }); 
+
+
 
 export function toggleProject(id) {
 	let project = projects[id];  
@@ -108,11 +114,12 @@ export function getSearchOptions() {
 	}
 }
 
-export function getCourses() {
+export function getCV() {
 	return {
 		payload : Schools, 
+		skills : Skills,
 		WorkExperienceData,
 		selfstudySchools : SelfStudySchools,
-		type: GET_COURSES
+		type: GET_CV
 	}
 }
