@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import { fetchProjects, fetchProject, toggleProject } from '../../actions'; 
 
-import Layout from '../layout'; 
 import Project from '../project';
 import SearchField from '../search_field'; 
 import ProjectContainer from './project_container'; 
@@ -65,11 +64,9 @@ class ProjectList extends Component {
 		}
 
 		return (
-		<Layout>
 			<div> 
 				{content}
 			</div>
-		</Layout>
 		);
 	}
 }

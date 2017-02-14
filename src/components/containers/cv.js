@@ -46,38 +46,36 @@ class CVPage extends Component {
 	}
 	render() {
 		return (
-		<Layout>
-			<div className="row">
-				<div className="col-sm-10 cv-title">
-					<h1>CV</h1>
-				</div>
-			</div>
-
-			<div className="cv-page">
-				<SkillContainer skills={this.props.skills} />
+			<div>
 				<div className="row">
-					<div className="col-sm-6">
-						<h2>Work experience: </h2>
-						<ul>
-							{this.props.workExperience.map(this.renderWorkexperience.bind(this))}
-						</ul>
-						<h2>Education: </h2>
-						{this.props.schools.map(this.renderSchools.bind(this))}
+					<div className="col-sm-10 cv-title">
+						<h1>CV</h1>
 					</div>
-					<div className="col-sm-6">
-						<h2>Selfstudy: </h2>
-						{this.props.selfstudySchools.map(this.renderSchools.bind(this))}
+				</div>
+				<div className="cv-page">
+					<SkillContainer skills={this.props.skills} />
+					<div className="row">
+						<div className="col-sm-6">
+							<h2>Work experience: </h2>
+							<ul>
+								{this.props.workExperience.map(this.renderWorkexperience.bind(this))}
+							</ul>
+							<h2>Education: </h2>
+							{this.props.schools.map(this.renderSchools.bind(this))}
+						</div>
+						<div className="col-sm-6">
+							<h2>Selfstudy: </h2>
+							{this.props.selfstudySchools.map(this.renderSchools.bind(this))}
+						</div>
+						
 					</div>
-					
 				</div>
 			</div>
-		</Layout>
 		);
 	}
 }
 
 function mapStateToProps(state) {
-	console.log("cv maptstatetoprops", state.cv); 
 	return { 
 		workExperience : state.cv.workExperience,
 		schools : state.cv.schools, 

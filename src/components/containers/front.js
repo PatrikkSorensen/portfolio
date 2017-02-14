@@ -37,7 +37,7 @@ class FrontPage extends Component {
 	}
 	render() {
 		return (
-		<Layout>
+			<div>
 			<div className="welcome-container">
 				<div className="row">
 					<div className="col-sm-8 col-sm-offset-2">
@@ -57,7 +57,7 @@ class FrontPage extends Component {
 						</div>
 				</div>
 			</div>
-		</Layout>
+			</div>
 		);
 	}
 }

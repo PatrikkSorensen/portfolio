@@ -17,9 +17,9 @@ export default () =>
 				</div>
 				<div style={{float : 'right'}} className="col-sm-4 col-sm-offset-4 headerlinks">
 					<Link to="/">HOME</Link>
-					<Link to="/projects">PROJECTS</Link>
-					<Link to="/about">ABOUT</Link>
-					<Link to="/cv">CV</Link>
+					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/projects">PROJECTS</Link>
+					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/about">ABOUT</Link>
+					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/cv">CV</Link>
 			    </div>
 			</div>
 		</div>

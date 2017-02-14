@@ -4,7 +4,6 @@ import Layout from '../layout';
 class AboutPage extends Component {
 	render() {
 		return (
-		<Layout>
 			<div className="about-container">
 				<div className="row">
 					<div className="col-sm-10">
@@ -26,7 +25,6 @@ class AboutPage extends Component {
 					</div>
 				</div>
 			</div>
-		</Layout>
 		);
 	}
 }
