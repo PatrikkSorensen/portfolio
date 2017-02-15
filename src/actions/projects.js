@@ -60,7 +60,7 @@ const projects = [
 				],
 			}, 
 			{
-				video: "https://www.youtube.com/v/txp8WJTmRFI"
+				video: "https://www.youtube.com/embed/txp8WJTmRFI?ecver=1"
 			}, 
 			{
 				img: {
@@ -138,7 +138,7 @@ const projects = [
 				}
 			},
 			{
-				video: "https://www.youtube.com/v/GUpy6vYiXxg"
+				video: "https://www.youtube.com/embed/GUpy6vYiXxg?ecver=1"
 			}, 
 		]
 	},
@@ -188,7 +188,7 @@ const projects = [
 				],
 			},
 			{
-				video: "https://www.youtube.com/v/1rabANglJ14"
+				video: "https://www.youtube.com/embed/1rabANglJ14?ecver=1"
 			}, 
 			{
 				subtitle: "More work: "
@@ -259,7 +259,7 @@ const projects = [
 				],
 			},
 			{
-				video: "https://www.youtube.com/v/cLmdqN15-rk&feature=youtu.be"
+				video: "https://www.youtube.com/embed/cLmdqN15-rk?ecver=1"
 			}, 
 			{
 				subtitle: "Gameplay: "
@@ -305,7 +305,7 @@ const projects = [
 				}
 			}, 
 			{
-				videoGallery: ["https://www.youtube.com/v/azY9w9Gl7Q4", "https://www.youtube.com/v/0SmZFX7SnBs", "https://www.youtube.com/v/HjJT8oIAULo"]
+				videoGallery: ["https://www.youtube.com/embed/0SmZFX7SnBs?ecver=1", "https://www.youtube.com/embed/HjJT8oIAULo?ecver=1", "https://www.youtube.com/embed/YrI_Hq4JSdU?ecver=1"]
 			}
 
 		]
@@ -457,7 +457,7 @@ const projects = [
 				]
 			}, 
 			{
-				videoGallery: ["https://www.youtube.com/v/VMxwQ-qJMmI", "https://www.youtube.com/v/tJDhtkJnYng"]
+				videoGallery: ["https://www.youtube.com/embed/VMxwQ-qJMmI?ecver=1", "https://www.youtube.com/embed/tJDhtkJnYng?ecver=1"]
 			}
 		]
 	},
@@ -684,7 +684,7 @@ const projects = [
 				audio: "../images/spacebus/clip.mp3"
 			}, 
 			{
-				video: "https://www.youtube.com/v/_IIZyZDKXGs"
+				video: "https://www.youtube.com/embed/_IIZyZDKXGs?ecver=1"
 			},
 
 		]
