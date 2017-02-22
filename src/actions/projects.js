@@ -1,6 +1,42 @@
 const projects = [
 	{
 		id: 0, 
+		cover : 'portfolio/portfolio-small.png',
+		name: 'Creating a modern web portfolio with Spring and Redux' ,
+		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning'],
+		role: ['Programmer'], 
+		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux', 'Spring'], 
+		date: 2017, 
+		content:  [
+			{
+				paragraph: [
+					{
+						text: "I had always wanted to pick up the "
+					},
+					{
+						link: {
+							target: "https://github.com/e-conomic/client-side-application-course",
+							label: "React course"
+						}
+					}, 
+					{
+						text: "offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When MOOC offered their "
+					}, 
+					{
+						link: {
+							target: "http://mooc.fi/courses/2016/cybersecurity/",
+							label: "Cyber Security Course"
+						}
+					}, 
+					{
+						text: " for free, i saw an opportunity to combine the two modern frameworks to create a interesting (and secure!) web application."
+					}
+				]
+			}, 
+		]
+	},
+	{
+		 id:1, 
 		source: "https://github.com/PatrikkSorensen/interactive-braid-evolution",
 		cover : 'iec-braids/comparison-small.png',
 		name: 'Interactive Braid evolution' ,
@@ -143,7 +179,7 @@ const projects = [
 		]
 	},
 	{
-		id: 1, 
+		id: 2, 
 		source: "https://github.com/PatrikkSorensen/interactive-mario-evolution",
 		cover : 'iec-mario/mario-small.png',
 		name: 'Evolving Mario controllers' ,
@@ -213,7 +249,7 @@ const projects = [
 		]
 	},
 	{
-		id: 2, 
+		id: 3, 
 		cover : 'curcuit/curcuit-small.png',
 		name: 'Curcuit',
 		source: "https://github.com/PatrikkSorensen/GAMEDEV2016", 
@@ -311,7 +347,7 @@ const projects = [
 		]
 	},
 	{
-		id: 3, 
+		id: 4, 
 		cover : 'map-generator/map-small.png',
 		name: 'Classifying NASA maps to create other maps' ,
 		source: "https://github.com/PolygeneLubricants/GAER-F2015",
@@ -409,7 +445,7 @@ const projects = [
 		]
 	},
 	{
-		id: 4, 
+		id: 5, 
 		cover : 'webgl/webgl-small.png',
 		name: 'CoffeGraph : webGL meets coffescript' ,
 		source: undefined,
@@ -462,7 +498,7 @@ const projects = [
 		]
 	},
 	{
-		id: 5, 
+		id: 6, 
 		cover : 'digit-classifier/dataset-small.png',
 		name: 'Digit classifier' ,
 		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning', 'Image recognition'],
@@ -530,7 +566,7 @@ const projects = [
 		]
 	},
 	{
-		id: 6, 
+		id: 7, 
 		cover : 'fidusia/fidusia-small.png',
 		name: 'Social learning through communities of play' ,
 		tags: ['Social learning', 'video games', 'multi-player vs single-player', 'child instituions'],
@@ -575,7 +611,7 @@ const projects = [
 		]
 	},
 	{
-		id: 7, 
+		id: 8, 
 		cover : 'ne-woods/ne_woods-small2.png',
 		name: 'Neverending woods' ,
 		source: "https://neverendingwoods.itch.io/neverending",
@@ -646,7 +682,7 @@ const projects = [
 	},
 
 	{
-		id: 8, 
+		id: 9, 
 		cover : 'spacebus/spacebus-small.png',
 		name: 'The Wonky Spacebus' ,
 		source: "https://neverendingwoods.itch.io/neverending",
@@ -689,12 +725,12 @@ const projects = [
 
 		]
 	},
-	/*{
-		id: 9, 
+	{
+		id: 10, 
 		cover : 'websites/website-small.png',
 		name: 'Websites' ,
 		tags: ['Web development'],
-		role: ['Programmer'], 
+		role: ['Fullstack Web developer'], 
 		created_with: ['Bootstrap', 'PHP', 'CSS / LESS', 'Wordpress', 'Jquery', 'Javascript'], 
 		date: 2014, 
 		content:  
@@ -735,42 +771,6 @@ const projects = [
 			}, 
 		]
 	}, 
-	{
-		id: 10, 
-		cover : 'portfolio/portfolio-small.png',
-		name: 'Creating a modern web portfolio with Spring and Redux' ,
-		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning'],
-		role: ['Programmer'], 
-		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux', 'Spring'], 
-		date: 2017, 
-		content:  [
-			{
-				paragraph: [
-					{
-						text: "I had always wanted to pick up the "
-					},
-					{
-						link: {
-							target: "https://github.com/e-conomic/client-side-application-course",
-							label: "React course"
-						}
-					}, 
-					{
-						text: "offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When MOOC offered their "
-					}, 
-					{
-						link: {
-							target: "http://mooc.fi/courses/2016/cybersecurity/",
-							label: "Cyber Security Course"
-						}
-					}, 
-					{
-						text: " for free, i saw an opportunity to combine the two modern frameworks to create a interesting (and secure!) web application."
-					}
-				]
-			}, 
-		]
-	}*/
 ]
 
 export default projects; 

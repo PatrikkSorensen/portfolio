@@ -73,23 +73,22 @@ class ProjectContainer extends Component {
         container[i] = this.renderThreeProjects(i); 
     }
 
-    for(j = 0; j <= cardProjects.length - i - j; j++) {
+    for(j = 0; j <= cardProjects.length - i; j++) {
       remainders[j] = this.renderCardProject(cardProjects[i + j], "col-sm-4");
     }
 
     return (
-      <div>
-        <div className="projects-container">
-          {container}
-          <div className="row">
-            <div className="col-sm-12 col-sm-offset-1" >
-              <div className="row">
-                {remainders}
-              </div>
+      <div className="projects-container">
+        {container}
+        <div className="row">
+          <div className="col-sm-12" >
+            <div className="row">
+              {remainders}
             </div>
           </div>
         </div>
-      </div>); 
+      </div>
+      ); 
   }
 
     renderThreeProjects(id) {
@@ -109,15 +108,20 @@ class ProjectContainer extends Component {
     if(project === undefined) {
       return; 
     }
+    let created_with = project.created_with.slice(0, 3); 
+    created_with = created_with.join(', ') + '.'; 
     
-    let tags = project.tags.join(', ') + '.'; 
+    let tags = project.tags.slice(0, 6); 
+    tags = tags.join(', ') + '.'; 
     return (
       <span className={className} key ={"span-" + project.id}>
           <CardProject 
             key={"card-project-" + project.id} 
             imgPath={project.cover} 
             name={project.name} tags={tags} 
-            onClick={() => this.props.onClick(project.id)} />
+            onClick={() => this.props.onClick(project.id)} 
+            createdWith={created_with}
+          />
       </span>
     );
   }
@@ -126,6 +130,11 @@ class ProjectContainer extends Component {
     let projects = this.renderCardProjects(); 
     return(
       <div>
+          <div className="row project-page">
+            <div className="col-sm-10">
+              <h1>Projects</h1>
+            </div>
+          </div>
           <SearchField />
           {projects}
       </div>

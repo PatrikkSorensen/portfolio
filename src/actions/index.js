@@ -20,9 +20,6 @@ import Skills from './skills';
 let filters = []; 
 let tags = []; 
 
-
-console.log("final array: ", Skills); 
-
 for(let i = 0; i < projects.length; i++){
 	for(let j = 0; j < projects[i].tags.length; j++) {
 		let string = projects[i].tags[j]; 

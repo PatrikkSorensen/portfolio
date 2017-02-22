@@ -151,12 +151,16 @@ class Project extends Component {
 								<span className="meta-label">Made with: </span> 
 								{this.props.created_with}
 							</p>
+						</div>
+						{contents}
+					</div>
+					<div className="row">
+						<div style={{marginTop: '48px'}} className="col-sm-10 post-container">
 							<p>
 								<span className="meta-label">Tags: </span> 
 								<i>{this.props.tags}</i>
 							</p>
 						</div>
-						{contents}
 					</div>
 				</div>
 			</div>

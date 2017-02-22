@@ -12,7 +12,7 @@ class SearchField extends Component {
 	} 
 	renderTags(tag) {
 		return (
-			<div key ={tag} className="tag col-sm-1">
+			<div key ={tag} className="tag col-sm-2">
 				<button className="btn btn-sm btn-default" onClick={() => this.props.removeFilter(tag)}> {tag} </button>
 	    	</div>)
 	}
@@ -28,7 +28,7 @@ class SearchField extends Component {
 	        		</div>
 			    </div>
 			    <div className="row">
-			    	<div className="col-sm-offset-3 tag-container">
+			    	<div className="tag-container">
 			    		{filters}
 		    		</div>
 			    </div>
@@ -38,7 +38,6 @@ class SearchField extends Component {
 }
 
 function mapStateToProps(state) {
-	//console.log("Search field: MapStateToProps", state.filters); 
 	return { 
 		activeFilters : state.filters.activeFilters,
 		searchOptions : state.filters.searchOptions

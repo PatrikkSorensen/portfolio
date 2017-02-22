@@ -46,19 +46,7 @@ class ProjectList extends Component {
 	render() {
 		let content; 
 		if(!this.props.params.id && this.props.projects.length > 0) {
-			content = 	(
-			<div>
-				<div className="row project-page">
-					<div className="col-sm-10">
-						<h1>Projects</h1>
-					</div>
-				</div>
-				<ProjectContainer 
-					projects={this.props.projects} 
-					filters={this.props.filters} 
-				/>
-			</div>
-				); 
+			content = <ProjectContainer projects={this.props.projects} filters={this.props.filters} />
 		} else {
 			content = this.props.projects.map(this.renderProject.bind(this));
 		}

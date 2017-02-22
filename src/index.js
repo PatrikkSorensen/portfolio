@@ -15,8 +15,9 @@ import { syncHistoryWithStore } from 'react-router-redux'
 
 import Header from './components/header'; 
 
-// Create an enhanced history that syncs navigation events with the store
-const store = createStore(Reducers); 
+const preloadedState = window.__PRELOADED_STATE__
+console.log("preloaded: ", preloadedState); 
+const store = createStore(Reducers, preloadedState); 
 
 ReactDOM.render(
     <Provider store={store}>
@@ -32,4 +33,5 @@ ReactDOM.render(
             </Route>
         </Router>
         </Provider>
-    , document.querySelector('.content'));
+    , document.querySelector('.content')
+);
