@@ -80,7 +80,7 @@ class Project extends Component {
 			return <div className="col-md-4"><img src={"http://www.dobbeltk.dk/images/" + image } width="300px"/></div>
 		});
 		return (
-			<div className="row">
+			<div className="row gallery">
 				{images}
 			</div>
 		)

@@ -2,10 +2,11 @@ const projects = [
 	{
 		id: 0, 
 		cover : 'portfolio/portfolio-small.png',
+		source: 'https://github.com/PatrikkSorensen/portfolio',
 		name: 'Creating a modern web portfolio with Spring and Redux' ,
-		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning'],
-		role: ['Programmer'], 
-		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux', 'Spring'], 
+		tags: ['Web Development', 'client-view', 'Virtual DOM', 'Single-page Web application'],
+		role: ['Fullstack Web Developer'], 
+		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux'], 
 		date: 2017, 
 		content:  [
 			{
@@ -20,7 +21,7 @@ const projects = [
 						}
 					}, 
 					{
-						text: "offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When MOOC offered their "
+						text: " offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When the University of Helsinki offered their "
 					}, 
 					{
 						link: {
@@ -30,9 +31,38 @@ const projects = [
 					}, 
 					{
 						text: " for free, i saw an opportunity to combine the two modern frameworks to create a interesting (and secure!) web application."
-					}
+					}, 
 				]
 			}, 
+			{
+				img: {
+					src: '/portfolio/redux.png'
+				}
+			}, 
+			{
+				paragraph: [
+					{
+						text: "Put simply, "
+					},
+					{
+						link: {
+							target: "http://redux.js.org/docs/introduction/",
+							label: "Redux"
+						}
+					}, 
+					{
+						text: " is a belssing when handling and representing data on the client-side of a web application. It helps with seperating your business logic and presentational logic into seperate files, with a useful dataflow that updates each component in an effecient manner."
+					}, 
+
+				]
+			},
+			{
+				paragraph: [
+					{
+						text: "It is likewise fit for testing, handling asynchronous dataflow, and in creating a reactive user interface, and most notably: it creates a lot of reusable code that can be used anywhere in your web application with so few lines of code. All you have to do is to carefully consider and plan your React components."
+					}
+				]
+			},
 		]
 	},
 	{
@@ -728,8 +758,9 @@ const projects = [
 	{
 		id: 10, 
 		cover : 'websites/website-small.png',
-		name: 'Websites' ,
-		tags: ['Web development'],
+		name: 'Websites',
+		collaborators: ['ItaloWinesOnly', 'Birks El-Service'],
+		tags: ['Web development', 'Web Design', 'Iterative workflow'],
 		role: ['Fullstack Web developer'], 
 		created_with: ['Bootstrap', 'PHP', 'CSS / LESS', 'Wordpress', 'Jquery', 'Javascript'], 
 		date: 2014, 
@@ -738,7 +769,7 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "During my studies on my Bachelor, i created two websites from scratch for two different companies. The websites was implemented with bootstrap, PHP, javascript and wordpress, and several artwork and visual components that had to be integrated to the websites. Creating and fitting images to the websites was likewise a part of the job."
+						text: "During my studies on my Bachelor, i created two websites from scratch for two different companies. The websites was implemented with bootstrap, php, javascript and wordpress, and several artwork and visual components that had to be integrated to the websites. Creating and fitting images to the websites was likewise a part of the job."
 					}
 				]
 			}, 
