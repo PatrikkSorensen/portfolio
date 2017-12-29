@@ -21,7 +21,7 @@ class SkillTable extends Component {
 
 	render() {
 		return (
-				<div className="row">
+				<div className="row skills-table">
 					<div className="col-sm-12">
 						<h2>Skills: </h2>
 						<table className="table table-bordered">

@@ -18,7 +18,7 @@ class WorkTable extends Component {
 
 	render() {
 		return (
-				<div className="row">
+				<div className="row work-table">
 					<div className="col-sm-12">
 						<h2>Work: </h2>
 						<table className="table table-bordered">

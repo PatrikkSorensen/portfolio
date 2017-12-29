@@ -20,7 +20,7 @@ class SelfstudyTable extends Component {
 
 	render() {
 		return (
-				<div className="row">
+				<div className="row selfstudy-table">
 					<div className="col-sm-12">
 						<h2>Selfstudy</h2>
 						<table className="table table-bordered">

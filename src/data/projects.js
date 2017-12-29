@@ -3,14 +3,14 @@ const projects = [
 		id: 0, 
 		cover : 'portfolio/portfolio-small.png',
 		source: 'https://github.com/PatrikkSorensen/portfolio',
-		name: 'Creating a modern web portfolio with Spring and Redux' ,
+		name: 'Client-side portfolio with Redux' ,
 		tags: ['Web Development', 'client-view', 'Virtual DOM', 'Single-page Web application'],
 		role: ['Fullstack Web Developer'], 
 		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux'], 
 		date: 2017, 
 		collaborators: ['None'],
 		content:  [
-			{
+				{
 				paragraph: [
 					{
 						text: "I had always wanted to pick up the "
@@ -22,7 +22,7 @@ const projects = [
 						}
 					}, 
 					{
-						text: " offered by economic, and enhance my web development skills specficially for learning the react extension Redux. When the University of Helsinki offered their "
+						text: " offered by economic, and enhance my web development skills by diving into the react extension Redux. When the University of Helsinki offered their "
 					}, 
 					{
 						link: {
@@ -31,10 +31,47 @@ const projects = [
 						}
 					}, 
 					{
-						text: " for free, i saw an opportunity to combine the two modern frameworks to create a interesting (and secure!) web application."
+						text: ", i saw an opportunity to expand myknowledge in web development and create a interesting (and secure!) web application."
 					}, 
 				]
 			}, 
+			{
+				paragraph: [
+					{
+						text: "The application is linked to my github repo, and built with "
+					},
+					{
+						link: {
+							target: "https://www.heroku.com/platform",
+							label: "Heroku"
+						}
+					},
+					{
+						text: ", making each push to the master branch on the github repo trigger a new deploy. All page contents are maintained in a json file, in key-value pairs, where the key decides the rendering technique, and the value provides content for that specific rendering technique."
+					},
+					{
+						text: "Lastly, routing is done through "
+					},
+					{
+						link: {
+							target: "https://github.com/ReactTraining/react-router",
+							label: "react-router-dom"
+						}
+					},
+					{
+						text: " and "
+					},
+					{
+						link: {
+							target: "https://github.com/reactjs/react-router-redux",
+							label: "react-redux-router"
+						}
+					},
+					{
+						text: "."
+					},
+				]
+			},
 			{
 				img: {
 					src: '/portfolio/redux.png'
@@ -43,27 +80,35 @@ const projects = [
 			{
 				paragraph: [
 					{
-						text: "Put simply, "
-					},
-					{
 						link: {
 							target: "http://redux.js.org/docs/introduction/",
 							label: "Redux"
 						}
 					}, 
 					{
-						text: " is a belssing when handling and representing data on the client-side of a web application. It helps with seperating your business logic and presentational logic into seperate files, with a useful dataflow that updates each component in an effecient manner."
+						text: " is great for handling and representing the app-state on the client-side of a web application. It provides means for seperating business logic and presentational React components into seperate files, with a an immutable dataflow approach that updates each component in an effecient manner."
 					}, 
-
 				]
+			},
+			{
+				subtitle: 'Ongoing work'
 			},
 			{
 				paragraph: [
 					{
-						text: "It is likewise fit for testing, handling asynchronous dataflow, and in creating a reactive user interface, and most notably: it creates a lot of reusable code that can be used anywhere in your web application with so few lines of code. All you have to do is to carefully consider and plan your React components."
-					}
+						text: "As fun as maintaining a client-side application can be, maintaining all project contents in a single json file can be a bit tedious. A"
+					},
+					{
+						link: {
+							target: "https://laravel.com/",
+							label: " Laravel "
+						}
+					}, 
+					{
+						text: " implementation could be a great addition for the retrieval, editing and saving of data."
+					}, 
 				]
-			},
+			}
 		]
 	},
 	{
@@ -84,7 +129,7 @@ const projects = [
 					}, 
 					{	
 						link: {
-							target: "../images/iec-mario/mario_ai_cig2016.pdf",
+							target: "../images/iec-braids/thesis.pdf",
 							label: "here.",
 						}
 					},   
@@ -133,7 +178,7 @@ const projects = [
 				}
 			}, 
 			{
-				subtitle: 'How it works: '
+				subtitle: 'How it works'
 			},
 			{
 				paragraph: [
@@ -180,7 +225,7 @@ const projects = [
 				}
 			}, 
 			{
-				subtitle: 'Some of the results: '
+				subtitle: 'Results'
 			},
 			{
 				paragraph: [
@@ -717,8 +762,8 @@ const projects = [
 		name: 'The Wonky Spacebus' ,
 		source: "https://neverendingwoods.itch.io/neverending",
 		tags: ['Controller-twister', 'Game Development', 'Leaking', 'Local multi-player'],
-		role: ['Programmer', 'Gameplay'], 
-		created_with: ['MatLab'], 
+		role: ['Programmer', 'Designer'], 
+		created_with: ['Unity', 'C#'], 
 		collaborators: ['Jonathan Jørgensen', 'Jeppeh Olsen', 'Maxime Moose', 'Jonas Jeppesen'],
 		date: 2016, 
 		content:  [

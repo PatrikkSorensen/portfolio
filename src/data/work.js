@@ -1,6 +1,12 @@
 const workExperience = [
 	{
-		id: 1,
+		employee: 'Casalogic A/S',
+		startYear: 2016,
+		endYear: undefined,
+		role: "System developer",
+		description: "System developer, delivering a web-driven billing platform for the danish energy sector, with maintability and testability in mind"
+	}, 
+	{
 		employee: 'Multiple',
 		startYear: 2012,
 		endYear: 2013,
@@ -8,7 +14,6 @@ const workExperience = [
 		description: "Freelance webdeveloper for creating a website for the companies Birks el-service Aps and ItaloWinesOnly"
 	}, 
 	{
-		id: 1, 
 		employee: 'Odense kommune',
 		startYear: 2015,
 		endYear: undefined,
@@ -16,7 +21,6 @@ const workExperience = [
 		description: "Manages a team of 6 disabled carers and substitutes them if absoloutly neccasary", 
 	}, 
 	{
-		id: 2,
 		employee: 'Røde Kors: Solskinsunge Odense',
 		startYear: 2014,
 		endYear: 2015,
