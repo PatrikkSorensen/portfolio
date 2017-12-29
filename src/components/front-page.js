@@ -1,16 +1,13 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux'; 
-import { fetchProjects, toggleProject } from '../../actions'; 
-import CardProject from '../card_project'; 
-import Layout from '../layout'; 
-import Project from '../project'; 
-
-import { Link } from 'react-router';
+import { fetchProjects, toggleProject } from '../actions'; 
+import CardProject from './card-project'; 
 
 class FrontPage extends Component {
 	componentWillMount() {
 			this.props.fetchProjects();
 	}
+
 	renderCardProject(project, className) { 
 		if(project) {
 		    let tags = project.tags.slice(0, 6); 
@@ -24,13 +21,14 @@ class FrontPage extends Component {
 						imgPath={project.cover} 
 						name={project.name} 
 						tags={tags} 
-						onClick={() => this.props.onClick(project.id)}
-			            createdWith={created_with}
+						onClick={() => this.props.onClick(project.id, 'projects/' + project.id)}
+            createdWith={created_with}
 					/> 
 				</span>
 			);
 		}
 	} 
+
 	renderFirstRow() {
 		let projects; 
 
@@ -43,8 +41,9 @@ class FrontPage extends Component {
 
 		return (
 			projects
-		);
+		)
 	}
+
 	render() {
 		return (
 			<div>
@@ -72,11 +71,10 @@ class FrontPage extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	//console.log("front page maptstatetoprops", state); 
+function mapStateToProps(state) { 
 	return { 
 		projects : state.projects.projects, 
-	}; 
+	}
 } 
 
 const mapDispatchToProps = {

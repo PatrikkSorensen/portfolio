@@ -1,5 +1,4 @@
-import React, { Component } from 'react'; 
-import Layout from '../layout'; 
+import React, { Component } from 'react'
 
 class AboutPage extends Component {
 	render() {
@@ -7,7 +6,7 @@ class AboutPage extends Component {
 			<div className="about-container">
 				<div className="row">
 					<div className="col-sm-10">
-						<h1>About </h1>
+						<h1>About</h1>
 					</div>
 				</div>
 				<div className="row">
@@ -18,12 +17,12 @@ class AboutPage extends Component {
 					</div>
 					<div className="col-lg-4">
 						<figure>
-							<img  src={"/images/about/2-edited.png"} width="300px" className="center-block" /> 
+							<img alt="about-me" src={"/images/about/2-edited.png"} width="300px" className="center-block" /> 
 						</figure>
 					</div>
 				</div>
 			</div>
-		);
+		)
 	}
 }
 

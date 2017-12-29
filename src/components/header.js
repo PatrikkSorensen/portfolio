@@ -1,6 +1,5 @@
 import React from 'react'; 
-import { Router, Route, Link, browserHistory } from 'react-router'
-import ReactAudioPlayer from 'react-audio-player'; 
+import { Link } from 'react-router-dom'
 
 export default () =>       
 <nav className="navbar navbar-default navbar-static-top">
@@ -17,9 +16,9 @@ export default () =>
 				</div>
 				<div style={{float : 'right'}} className="col-sm-4 col-sm-offset-4 headerlinks">
 					<Link to="/">HOME</Link>
-					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/projects">PROJECTS</Link>
-					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/about">ABOUT</Link>
-					<Link activeStyle={{'textDecoration' : 'underline !important'}} to="/cv">CV</Link>
+					<Link activestyle={{'textDecoration' : 'underline !important'}} to="/projects">PROJECTS</Link>
+					<Link activestyle={{'textDecoration' : 'underline !important'}} to="/about">ABOUT</Link>
+					<Link activestyle={{'textDecoration' : 'underline !important'}} to="/cv">CV</Link>
 			    </div>
 			</div>
 		</div>

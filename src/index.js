@@ -1,37 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
 
-import FrontPage from './components/containers/front';
-import ProjectPage from './components/containers/project_page'; 
-import AboutPage from './components/containers/about'; 
-import CVPage from './components/containers/cv'; 
-import Layout from './components/layout';
+import { createStore, applyMiddleware, compose } from 'redux'
+import { routerMiddleware } from 'react-router-redux'
+import thunk from 'redux-thunk'
+import createHistory from 'history/createBrowserHistory'
+import rootReducer from './reducers'
 
-import Reducers from './reducers';
-import { syncHistoryWithStore } from 'react-router-redux'
+import App from './components/app'
 
-import Header from './components/header'; 
+export const history = createHistory()
 
-const preloadedState = window.__PRELOADED_STATE__
-console.log("preloaded: ", preloadedState); 
-const store = createStore(Reducers, preloadedState); 
+const middleware = [
+	thunk,
+	routerMiddleware(history)
+]
 
-ReactDOM.render(
-    <Provider store={store}>
-        <Router history={browserHistory}>
-    	  	<Route path="/" component={Layout}>
-                <IndexRoute component={FrontPage} />
-        	  	<Route path="projects" component={ProjectPage} >
-                    <Route path=":id" />
-                </Route>
-        	  	<Route path="about" component={AboutPage} />
-                <Route path="cv" component={CVPage} />
-                <Route path="*" component={FrontPage} />
-            </Route>
-        </Router>
-        </Provider>
-    , document.querySelector('.content')
-);
+const composedEnhancers = compose(
+	applyMiddleware(...middleware)
+)
+
+render(
+	<Provider store={createStore(rootReducer, composedEnhancers)} >
+		<ConnectedRouter history={history}>
+			<div>
+				<App />
+			</div>
+		</ConnectedRouter>
+	</Provider>,
+	document.querySelector('#root')
+)

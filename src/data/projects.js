@@ -66,7 +66,7 @@ const projects = [
 		]
 	},
 	{
-		 id:1, 
+		id:1, 
 		source: "https://github.com/PatrikkSorensen/interactive-braid-evolution",
 		cover : 'iec-braids/comparison-small.png',
 		name: 'Interactive Braid evolution' ,
@@ -530,6 +530,7 @@ const projects = [
 	{
 		id: 6, 
 		cover : 'digit-classifier/dataset-small.png',
+		source: undefined,
 		name: 'Digit classifier' ,
 		tags: ['Classification', 'Data mining', 'MNIST dataset', 'Data analysis', 'Machine learning', 'Image recognition'],
 		role: ['Programmer'], 
@@ -598,6 +599,7 @@ const projects = [
 	{
 		id: 7, 
 		cover : 'fidusia/fidusia-small.png',
+		source: undefined,
 		name: 'Social learning through communities of play' ,
 		tags: ['Social learning', 'video games', 'multi-player vs single-player', 'child instituions'],
 		role: ['Designer', 'Ressearcher'], 
@@ -758,6 +760,7 @@ const projects = [
 	{
 		id: 10, 
 		cover : 'websites/website-small.png',
+		source: undefined,
 		name: 'Websites',
 		collaborators: ['ItaloWinesOnly', 'Birks El-Service'],
 		tags: ['Web development', 'Web Design', 'Iterative workflow'],

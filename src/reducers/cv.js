@@ -4,23 +4,22 @@ import {
 
 const initialState = {
 	schools: [], 
-	selfstudySchools: [], 
-	workExperience: [], 
+	selfstudy: [], 
+	work: [], 
 	skills: []
 }
-
-let projects = []; 
 
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case GET_CV:
 			return {
 				schools: action.payload, 
-				selfstudySchools: action.selfstudySchools,
-				workExperience: action.WorkExperienceData, 
+				selfstudys: action.selfstudy,
+				work: action.work, 
 				skills: action.skills 
-			};
+			}
+			
+	    default:
+    		return state
 	}
-
-	return state; 
 } 

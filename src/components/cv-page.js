@@ -1,8 +1,11 @@
-import React, { Component } from 'react'; 
-import { connect } from 'react-redux'; 
-import { getCV } from '../../actions'; 
-import Layout from '../layout'; 
-import SkillContainer from './skill_container'; 
+import React, { Component } from 'react' 
+import { connect } from 'react-redux' 
+import { getCV } from '../actions' 
+
+import SkillTable from './skill-table' 
+// import WorkTable from './work-table' 
+// import SelfstudyTable from './selfstudy-table' 
+// import EducationTable from './education-table' 
 
 class CVPage extends Component {
 	componentWillMount() {
@@ -34,7 +37,7 @@ class CVPage extends Component {
 	}
 	renderWorkexperience(experience) {
 		let endYear; 
-		if(experience.endYear == undefined) {
+		if(experience.endYear === undefined) {
 			endYear = 'present'; 
 		} else {
 			endYear = experience.endYear; 
@@ -53,22 +56,7 @@ class CVPage extends Component {
 					</div>
 				</div>
 				<div className="cv-page">
-					<SkillContainer skills={this.props.skills} />
-					<div className="row">
-						<div className="col-sm-6">
-							<h2>Work experience: </h2>
-							<ul>
-								{this.props.workExperience.map(this.renderWorkexperience.bind(this))}
-							</ul>
-							<h2>Education: </h2>
-							{this.props.schools.map(this.renderSchools.bind(this))}
-						</div>
-						<div className="col-sm-6">
-							<h2>Selfstudy: </h2>
-							{this.props.selfstudySchools.map(this.renderSchools.bind(this))}
-						</div>
-						
-					</div>
+					<SkillTable skills={this.props.skills} />
 				</div>
 			</div>
 		);
@@ -77,11 +65,11 @@ class CVPage extends Component {
 
 function mapStateToProps(state) {
 	return { 
-		workExperience : state.cv.workExperience,
-		schools : state.cv.schools, 
-		selfstudySchools: state.cv.selfstudySchools, 
+		work : state.cv.work,
+		educations : state.cv.educations, 
+		selfstudy: state.cv.selfstudy, 
 		skills: state.cv.skills
-	}; 
+	}
 } 
 
 const mapDispatchToProps = {

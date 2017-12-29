@@ -1,9 +1,10 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import { PropTypes } from 'prop-types'
 
 const CardProject = ({onClick, name, tags, imgPath, createdWith }) => (
     <div className="card card-block">
       <a className="card-link" onClick={onClick}>
-      	<img src={'images/' + imgPath} className="img-fluid" width="400px" />
+      	<img src={'images/' + imgPath} alt={imgPath} className="img-fluid" width="400px" />
           <p className="project-title">{name}</p>
           <p><b>Created with: {createdWith}</b></p>
           <p><i>{tags}</i></p>

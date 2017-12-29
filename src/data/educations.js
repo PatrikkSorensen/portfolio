@@ -1,7 +1,8 @@
 const courses = [
 	{
-		id : 0, 
-		name : 'IT-University of Copenhagen', 
+		id : 0,
+		name: "Give me a name please",
+		school : 'IT-University of Copenhagen', 
 		type: 'Master degree',
 		link: 'https://www.itu.dk/', 
 		year: "2014-2016",
@@ -71,7 +72,8 @@ const courses = [
 	}, 
 	{
 		id : 1, 
-		name : 'Southern University of Denmark', 
+		school : 'Southern University of Denmark', 
+		name: "Give me a name please",
 		link : "http://www.sdu.dk/uddannelse/bachelor/informationsvidenskab",
 		type: 'Bachelor',
 		year: "2011-2014",
