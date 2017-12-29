@@ -37,7 +37,7 @@ class Project extends Component {
 			<div className="row">
 				<div style={{float: 'none', marginBottom: '20', marginTop: '20'}} className="col-sm-8">
 					<figure>
-						<img alt={image.src} src={"http://www.dobbeltk.dk/images/" + image.src } width="600px"/> 
+						<img alt={image.src} src={"images/" + image.src } width="600px"/> 
 						<figcaption>{image.text}</figcaption>
 					</figure>
 				</div>
