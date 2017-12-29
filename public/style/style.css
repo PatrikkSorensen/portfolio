@@ -1,0 +1,204 @@
+p, li, a, tr, button {
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 15px; 
+}
+
+/*a {
+	color: black !important; 
+}*/
+
+a:hover {
+	cursor: pointer;
+}
+
+h2 {
+	font-size: 24px !important; 
+}
+
+.navbar {
+	margin-top: 12px; 
+	border-bottom: 2px solid rgb(210, 210, 210); 
+	margin-bottom: 50px; 
+
+}
+
+.navbar a {
+	color: black !important; 
+}
+
+
+/* spreads out navbar items */
+.headerlinks a {
+	padding-left: 50px; 
+	font-size: 14px; 
+	font-weight: bold; 
+	color: black !important; 
+}
+
+/* for cards */
+.card {
+	border-radius: 0px !important; 
+	border: none !important; 
+	background-color: rgb(225, 225, 225) !important; 
+	height: 515px; 
+}
+
+.card .project-title {
+	font-size: 18px;  
+	margin-top: 14px; 
+}
+
+.card-link:hover{
+	cursor: pointer;
+	color: grey; 
+}
+
+.card p {
+	font-size: 14px; 
+}
+
+.card button {
+	position: absolute; 
+	bottom: 25px; 
+	left: 20; 
+	background-color: rgb(225, 225, 225); 
+	font-size: 14px; 
+	border-radius: 0px;
+	border-color : rgb(150, 150, 150); 
+	color: black; 
+}
+
+.card button:hover {
+	background-color: rgb(150, 150, 150); 
+	border-color : rgb(130, 130, 130); 
+}
+
+.card img:hover {
+	opacity: 0.85; 
+}
+/****************** FRONT PAGE ********************/ 
+.welcome-container {
+	margin-top: 85px; 
+}
+
+.welcome-container h1 {
+	font-size: 10px; 
+	font-weight: normal;
+}
+
+.welcome-container p {
+	font-size: 22px; 
+	font-weight: normal;
+}
+.showcase-container {
+	//background-color: red; 
+	margin-top: 64px; 
+}
+
+.showcase-container a {
+	font-size: 14px;
+	color: black; 
+}
+
+
+/****************** PROJECTS PAGE *****************/ 
+
+.card-row {
+	margin-top: 12px; 
+}
+
+.projects-container {
+	margin-top: 24px; 
+}
+
+.projects-container a {
+	font-size: 14px;
+	color: black; 
+}
+
+.project-meta-info {
+	margin-bottom: 12px; 
+}
+
+.project-meta-info p {
+	font-size: 14px; 
+	margin-top: 0px; 
+	margin-bottom: 0px;
+}
+
+.meta-label {
+	color: red; 
+}
+
+.post-container a {
+	color: rgb(218, 46, 7) !important; 
+}
+
+.gallery img {
+	margin: 48px 0px; 
+}
+
+/****************** PROJECT CONTENTS *****************/ 
+
+.project-contents h3 {
+	margin-top: 24px;
+}
+
+.project-contents a {
+	color: red;
+}
+
+.project-contents a:hover {
+	color: red;
+}
+
+/****************** ABOUT PAGE ********************/ 
+
+figcaption {
+	font-size: 14px;
+	font-weight: bold; 
+}
+
+/****************** CV PAGE ********************/ 
+
+.cv-page h3 {
+	margin-top: 0px; 
+}
+
+.cv-page h6 {
+	margin-top: 0px; 
+}
+
+.cv-page a {
+	color: rgb(218, 46, 7) !important; 
+}
+
+.courses-container li {
+	font-size: 14px; 
+}
+
+footer {
+	padding-top: 12px;
+	border-top: 2px solid rgb(210, 210, 210); 
+	margin-top: 175px; 
+	margin-bottom: 40px; 
+}
+
+footer p {
+
+	margin-bottom: 0px !important; 
+	font-size: 14px; 
+}
+
+footer img {
+	margin-left: 12px; 
+}
+
+footer img .first {
+	margin-left: 0px; 
+}
+
+.no-radius {
+	border-radius: 0px !important; 
+}
+

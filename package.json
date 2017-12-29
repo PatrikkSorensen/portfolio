@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Portfolio for Patrikk Dyrberg Sørensen",
   "main": "index.js",
-  "homepage": "https://github.com/pdsorensen/portfolio",
+  "homepage": "https://dobbeltk.com/",
   "repository": "git@github.com:PatrikkSorensen/portfolio.git",
   "devDependencies": {
     "prop-types": "^15.6.0",
