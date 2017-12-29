@@ -3,7 +3,7 @@ import {
 } from '../actions/types'; 
 
 const initialState = {
-	schools: [], 
+	educations: [], 
 	selfstudy: [], 
 	work: [], 
 	skills: []
@@ -13,8 +13,8 @@ export default function(state = initialState, action) {
 	switch (action.type) {
 		case GET_CV:
 			return {
-				schools: action.payload, 
-				selfstudys: action.selfstudy,
+				educations: action.payload, 
+				selfstudy: action.selfstudy,
 				work: action.work, 
 				skills: action.skills 
 			}

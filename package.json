@@ -1,16 +1,16 @@
 {
-"name": "pds-portfolio",
-"version": "1.0.1",
-"description": "Portfolio for Patrikk Dyrberg Sørensen",
-"main": "index.js",
-"homepage": "https://github.com/pdsorensen/portfolio",
-"repository": "git@github.com:PatrikkSorensen/portfolio.git",
+  "name": "pds-portfolio",
+  "version": "1.0.1",
+  "description": "Portfolio for Patrikk Dyrberg Sørensen",
+  "main": "index.js",
+  "homepage": "https://github.com/pdsorensen/portfolio",
+  "repository": "git@github.com:PatrikkSorensen/portfolio.git",
   "devDependencies": {
     "prop-types": "^15.6.0",
-    "react-audio-player": "^0.6.4",
-    "react-scripts": "^1.0.17"
+    "react-audio-player": "^0.6.4"
   },
   "dependencies": {
+    "react-scripts": "^1.0.17",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

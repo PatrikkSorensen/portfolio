@@ -9,7 +9,6 @@ import { push } from 'react-router-redux'
 import { 
   FETCH_PROJECTS,
   TOGGLE_PROJECT,
-  FETCH_PROJECT,
   GET_CV,
 } from './types'; 
 

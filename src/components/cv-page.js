@@ -3,50 +3,15 @@ import { connect } from 'react-redux'
 import { getCV } from '../actions' 
 
 import SkillTable from './skill-table' 
-// import WorkTable from './work-table' 
-// import SelfstudyTable from './selfstudy-table' 
-// import EducationTable from './education-table' 
+import WorkTable from './work-table' 
+import EducationTable from './education-table' 
+import SelfstudyTable from './selfstudy-table' 
 
 class CVPage extends Component {
 	componentWillMount() {
 		this.props.getCV(); 
 	}
-	renderCourse(course) {
-		if(course.ects) {
-			return <li>{course.name} </li>
-		} else { 
-			return <li>{course.name} </li>
-		}
-	}
 
-	renderSchools(school) {
-		let title; 
-		if(school.year) {
-			title = '/ ' + school.year; 
-		}
-		return (
-			<div key={school.id} className="row">
-				<div className="col-sm-11">
-					<h6><b>{school.name} {title}</b></h6>
-					<ul className="courses-container">
-						{school.courses.map(this.renderCourse)}
-					</ul>
-				</div>
-			</div>
-		);
-	}
-	renderWorkexperience(experience) {
-		let endYear; 
-		if(experience.endYear === undefined) {
-			endYear = 'present'; 
-		} else {
-			endYear = experience.endYear; 
-		}
-
-		return (
-				<li>{experience.employee} : {experience.role}   |  {experience.startYear} to {endYear}</li>
-		);
-	}
 	render() {
 		return (
 			<div>
@@ -57,6 +22,9 @@ class CVPage extends Component {
 				</div>
 				<div className="cv-page">
 					<SkillTable skills={this.props.skills} />
+					<WorkTable work={this.props.work} />
+					<EducationTable educations={this.props.educations} />
+					<SelfstudyTable selfstudy={this.props.selfstudy} />
 				</div>
 			</div>
 		);

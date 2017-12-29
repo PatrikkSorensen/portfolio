@@ -4,31 +4,31 @@ let skills =
 [
 	{
 		name: 'c#', 
-		level: 'experienced'
+		level: 'comfortable'
 	}, 
 	{
 		name: 'python', 
-		level: 'comfortable'
+		level: 'experienced'
 	},
 	{
 		name: 'php',
-		level: 'comfortable'
+		level: 'experienced'
 	},
 	{
 		name: 'javascript', 
-		level: 'well familiar'
+		level: 'experienced'
 	}, 
 	{
 		name: 'java', 
-		level: 'well familiar'
-	}, 
-	{
-		name: 'c', 
 		level: 'comfortable'
 	}, 
 	{
+		name: 'c', 
+		level: 'well familiar'
+	}, 
+	{
 		name: 'c++', 
-		level: 'beginner'
+		level: 'begginner'
 	}
 ]
 

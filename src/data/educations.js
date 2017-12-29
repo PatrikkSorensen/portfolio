@@ -1,7 +1,7 @@
 const courses = [
 	{
 		id : 0,
-		name: "Give me a name please",
+		name: "Master of Science in Games Technology",
 		school : 'IT-University of Copenhagen', 
 		type: 'Master degree',
 		link: 'https://www.itu.dk/', 
@@ -73,7 +73,7 @@ const courses = [
 	{
 		id : 1, 
 		school : 'Southern University of Denmark', 
-		name: "Give me a name please",
+		name: "Information knowledge, it, and interaction design",
 		link : "http://www.sdu.dk/uddannelse/bachelor/informationsvidenskab",
 		type: 'Bachelor',
 		year: "2011-2014",
