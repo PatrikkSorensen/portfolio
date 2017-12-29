@@ -37,7 +37,7 @@ class Project extends Component {
 			<div className="row">
 				<div style={{float: 'none', marginBottom: '20', marginTop: '20'}} className="col-sm-8">
 					<figure>
-						<img alt={image.src} src={"images/" + image.src } width="600px"/> 
+						<img alt={image.src} src={"/images/" + image.src } width="600px"/> 
 						<figcaption>{image.text}</figcaption>
 					</figure>
 				</div>
@@ -46,7 +46,7 @@ class Project extends Component {
 	}
 
 	renderSubtitle(title) {
-		return <h4>{title}</h4>
+		return <h3>{title}</h3>
 	}
 
 	renderItalicParagraph(paragraph) {
@@ -96,13 +96,14 @@ class Project extends Component {
 	}
 
 	renderVideoGallery(array) {
-		let videos = array.map(function(url) {
+		let column = 12 / array.length 
+		let videos = array.map((url) => {
 			return (
-				<div className="col-sm-4">
+				<div className={"col-sm-" + column}>
 					<iframe title={url} width="350" height="300" src={url}></iframe>
 				</div>
-			);
-		});
+			)
+		})
 
 		return (
 			<div className="row">
@@ -134,26 +135,16 @@ class Project extends Component {
 			return null
 		})
 
-
 		let tags = this.convertArrayToCSVString(this.props.project.tags); 
 		let roles = this.convertArrayToCSVString(this.props.project.role); 
 		let collaborators = this.convertArrayToCSVString(this.props.project.collaborators); 
 		let created_with = this.convertArrayToCSVString(this.props.project.created_with); 
-
-		let source; 
-		if(this.props.source) {
-			source = (
-				<p>
-					<span className="meta-label">Source: </span> 
-					{this.props.source}
-				</p>
-			);
-		}
+		let source = this.props.project.source ? this.props.project.source : 'no source for this project'
 
 		return(
 			<ProjectContents 
 				name={this.props.project.name}
-				year={this.props.project.year}
+				date={this.props.project.date}
 				contents={contents}
 				role={roles}
 				collaborators={collaborators}

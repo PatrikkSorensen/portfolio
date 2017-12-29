@@ -38,16 +38,15 @@ class ProjectPage extends Component {
   }
 
   renderThreeProjects(id) {
-    let p1, p2, p3; 
-    let projects = []; 
-    p1 = this.renderCardProject(this.props.projects[id], "col-sm-4");
-    p2 = this.renderCardProject(this.props.projects[id + 1], "col-sm-4");
-    p3 = this.renderCardProject(this.props.projects[id + 2], "col-sm-4");
-
-    projects = [p1, p2, p3]; 
     return (
-      <div className="row card-row" key={"div- " + id}>{ projects } </div>
-    );
+      <div className="row card-row" key={"div- " + id}>
+        {[
+          this.renderCardProject(this.props.projects[id], "col-sm-4"),
+          this.renderCardProject(this.props.projects[id + 1], "col-sm-4"),
+          this.renderCardProject(this.props.projects[id + 2], "col-sm-4")
+        ]} 
+      </div>
+    )
   }
 
   renderCardProject(project, className) {  
@@ -55,20 +54,15 @@ class ProjectPage extends Component {
       return
     }
 
-    let created_with = project.created_with.slice(0, 3)
-    created_with = created_with.join(', ') + '.'
-    
-    let tags = project.tags.slice(0, 6)
-    tags = tags.join(', ') + '.'
-
     return (
       <span className={className} key ={"span-" + project.id}>
           <CardProject 
             key={"card-project-" + project.id} 
             imgPath={project.cover} 
-            name={project.name} tags={tags} 
+            name={project.name} 
+            tags={project.tags.slice(0, 6).join(', ') + '.'} 
+            createdWith={project.created_with.slice(0, 3).join(', ') + '.'}
             onClick={() => this.props.onClick(project.id, 'projects/' + project.id)} 
-            createdWith={created_with}
           />
       </span>
     )

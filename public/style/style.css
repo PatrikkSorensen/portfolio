@@ -130,10 +130,6 @@ h2 {
 	color: red; 
 }
 
-.post-container a {
-	color: rgb(218, 46, 7) !important; 
-}
-
 .gallery img {
 	margin: 48px 0px; 
 }
@@ -145,7 +141,7 @@ h2 {
 }
 
 .project-contents a {
-	color: red;
+	color: rgb(218, 46, 7) !important; 
 }
 
 .project-contents a:hover {

@@ -17,7 +17,7 @@ class AboutPage extends Component {
 					</div>
 					<div className="col-lg-4">
 						<figure>
-							<img alt="about-me" src={"/images/about/2-edited.png"} width="300px" className="center-block" /> 
+							<img alt="about-me" src={"/images/about/about.png"} width="250px" className="center-block" /> 
 						</figure>
 					</div>
 				</div>

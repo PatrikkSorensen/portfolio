@@ -8,6 +8,7 @@ const projects = [
 		role: ['Fullstack Web Developer'], 
 		created_with: ['React', 'Bootstrap', 'Javascript', 'Node.js', 'Redux'], 
 		date: 2017, 
+		collaborators: ['None'],
 		content:  [
 			{
 				paragraph: [
@@ -126,9 +127,6 @@ const projects = [
 				],
 			}, 
 			{
-				video: "https://www.youtube.com/embed/txp8WJTmRFI?ecver=1"
-			}, 
-			{
 				img: {
 					src: '/iec-braids/social-garden.jpg',
 					text: 'figure 1: concept art of the \'social garden\' presented in the ressearch project Flora Robotica.'
@@ -204,7 +202,7 @@ const projects = [
 				}
 			},
 			{
-				video: "https://www.youtube.com/embed/GUpy6vYiXxg?ecver=1"
+				videoGallery: ["https://www.youtube.com/embed/GUpy6vYiXxg?ecver=1", "https://www.youtube.com/embed/txp8WJTmRFI?ecver=1"]
 			}, 
 		]
 	},
