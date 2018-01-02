@@ -1,4 +1,101 @@
 const projects = [
+	// {
+	// 	id: 0, 
+	// 	cover : 'data-course/project-cover.png',
+	// 	source: 'https://github.com/PatrikkSorensen/portfolio',
+	// 	name: 'Kaggle project: most scoring football league',
+	// 	tags: ['Pandas', 'Data science', 'Machine learning', 'Data visulization', 'Data Cleaning', 'Data Formatting', 'Kaggle'],
+	// 	role: ['Fullstack Web Developer'], 
+	// 	created_with: ['Python', 'Pandas', 'Scikit-learn', 'MatPlotLib', 'Numpy'], 
+	// 	date: 2017, 
+	// 	collaborators: ['None'],
+	// 	content:  [
+	// 		{
+	// 			paragraph: [
+	// 				{
+	// 					text: "During this year, i have taken the "
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://www.coursera.org/specializations/data-science-python",
+	// 					'label': "Applied Data Science with Python Speclization"
+	// 					}
+	// 				},
+	// 				{
+	// 					text: " on Coursera, expanding my expertise in the booming field of data science and machine learning. I like to think of Data as a way of making your business decisions and strategies even more robust."
+	// 				},
+	// 			]
+	// 		},
+	// 		{
+	// 			paragraph: [
+	// 				{
+	// 					text: "For the final assignment of the course: "
+	// 				},
+	// 				{
+	// 					text: ", "
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://www.coursera.org/specializations/data-science-python",
+	// 					'label': "Applied Plotting, Charting & Data Representation in Python"
+	// 					}
+	// 				},
+	// 				{
+	// 					text: " i was tasked in creating a data science hypothesis and visualize it. I started on browsing through the internet for large datesets and ended up at "
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://www.kaggle.com",
+	// 					'label': "Kaggle"
+	// 					}
+	// 				},
+	// 				{
+	// 					text: " where i found a dataset for the "
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://www.kaggle.com/hugomathien/soccer",
+	// 					'label': "European Soccer Database"
+	// 					}
+	// 				},
+	// 				{
+	// 					text: " (which is a great and fun dataset for anyone interested in applying and testing their data science skills)."
+	// 				},
+	// 			]
+	// 		},
+	// 		{
+	// 			'subtitle': 'The results'
+	// 		}, 
+	// 		{
+	// 			paragraph: [
+	// 				{
+	// 					text: "The hypothesis is as following: \"which football league should i watch if i want to see the most most goals being scored\". The project only uses a subset of the dataset (all data related to matches between 2008-2016 along with some data for the european football leagues themselves. I use the " 
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://pandas.pydata.org/",
+	// 					'label': "Pandas"
+	// 					}
+	// 				},
+	// 				{
+	// 					text: " framework for data analysis and "
+	// 				},
+	// 				{
+	// 				link: {
+	// 					'target': "https://www.coursera.org/specializations/data-science-python",
+	// 					'label': "Matplotlib"
+	// 					}
+	// 				}, 
+	// 				{
+	// 					text: " for plotting and visualization."
+	// 				},
+	// 			]
+	// 		},
+	// 		{
+	// 			code:	'football-project/snippet1.py'
+	// 		}
+	// 	]
+	// },
 	{
 		id: 0, 
 		cover : 'portfolio/portfolio-small.png',

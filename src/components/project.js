@@ -1,8 +1,11 @@
 import React, { Component } from 'react' 
 import { connect } from 'react-redux'
-import { toggleProject } from '../actions'
 import ReactAudioPlayer from 'react-audio-player'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { tomorrowNightEighties } from 'react-syntax-highlighter/styles/hljs';
 
+
+import { toggleProject } from '../actions'
 import ProjectContents from './project-contents'
 
 
@@ -112,6 +115,11 @@ class Project extends Component {
 		)
 	}
 
+	renderSyntax(content) {
+	  const codeString = '(num) => num + 1';
+	  return <SyntaxHighlighter language='javascript' style={tomorrowNightEighties}>{codeString}</SyntaxHighlighter>
+	}
+
 	render() {
 		let contents = this.props.project.content.map((content) => {
 			if(content.paragraph) {
@@ -130,6 +138,8 @@ class Project extends Component {
 				return this.renderGallery(content.gallery); 
 			} else if (content.videoGallery) {
 				return this.renderVideoGallery(content.videoGallery);
+			} else if (content.code) {
+				return this.renderSyntax(content.code)
 			}
 
 			return null
