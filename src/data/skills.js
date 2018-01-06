@@ -29,6 +29,10 @@ let skills =
 	{
 		name: 'c++', 
 		level: 'begginner'
+	},
+	{
+		name: 'clojure', 
+		level: 'begginner'
 	}
 ]
 

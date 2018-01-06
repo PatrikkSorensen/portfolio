@@ -34,9 +34,9 @@ class FrontPage extends Component {
 
 		if(this.props.projects.length > 0) {
 			projects = []; 
-			projects[0] = this.renderCardProject(this.props.projects[1], "col-md-4")
-			projects[1] = this.renderCardProject(this.props.projects[2], "col-md-4")
-			projects[2] = this.renderCardProject(this.props.projects[3], "col-md-4")
+			projects[0] = this.renderCardProject(this.props.projects[5], "col-md-4")
+			projects[1] = this.renderCardProject(this.props.projects[3], "col-md-4")
+			projects[2] = this.renderCardProject(this.props.projects[4], "col-md-4")
 		}
 
 		return (

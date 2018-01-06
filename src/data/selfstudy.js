@@ -1,8 +1,39 @@
 const courses = [
 	{
 		id : 0, 
-		name : 'MOOC.fi', 
-		description: "The MOOC.fi delivers some very solid and and hands-on programming courses which has greatly expanded my programming skills and understanding on how to become a better programmer.",
+		name : 'Coursera', 
+		description: "",
+		courses: [
+			{
+				name : "Introduction to Data Science in Python", 
+				year: undefined, 
+			}, 
+			{
+				name: "Applied Plotting, Charting & Data Representation in Python",
+				year: undefined
+			},
+			{
+				name: "Applied Machine Learning in Python",
+				year: undefined
+			},
+			{
+				name: "Applied Machine Learning in Python",
+				year: undefined
+			},
+			{
+				name: "Applied Social Network Analysis in Python",
+				year: undefined
+			},
+			{
+				name: "C++ For C Programmers, Part A",
+				year: undefined
+			},
+		]
+	}, 
+	{
+		id : 1, 
+		name : 'mooc.fi', 
+		description: "The moocfi delivers some very solid and and hands-on programming courses which has greatly expanded my programming skills and understanding on how to become a better programmer.",
 		courses: [
 			{
 				name : "Alto C course: learning the C programming language", 
@@ -10,13 +41,13 @@ const courses = [
 				month: "July"
 			}, 
 			{
-				name: "Cyber Security Base with F-Secure  ( ONGOING )",
+				name: "Cyber Security Base with F-Secure",
 				year: undefined
 			}
 		]
 	}, 
 	{
-		id : 1, 
+		id : 2, 
 		name : 'MIT OpenCourseWare', 
 		link: 'https://ocw.mit.edu/index.htm',
 		courses: [
@@ -35,7 +66,7 @@ const courses = [
 		]
 	},
 	{
-		id : 2, 
+		id : 3, 
 		name : 'Lynda', 
 		description: "Lynda has given me a solid overview over some of the core softwares used in animation and modern visualization tools. Beneath, i have selected some of the courses i think i learned most from at that given time and have been most fond of.",
 		courses: [
