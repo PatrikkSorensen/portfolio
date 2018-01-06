@@ -35,6 +35,14 @@ class Project extends Component {
 		)
 	}
 
+	renderBulletList(list) {
+		return (
+			<ul>
+				{ list.map((item) => { return <li><code >{item}</code></li> }) }
+			</ul>
+			)
+	}
+
 	renderImage(image) {
 		return (
 			<div className="row">
@@ -45,7 +53,7 @@ class Project extends Component {
 					</figure>
 				</div>
 			</div>
-		); 
+		)
 	}
 
 	renderSubtitle(title) {
@@ -116,8 +124,7 @@ class Project extends Component {
 	}
 
 	renderSyntax(content) {
-	  const codeString = '(num) => num + 1';
-	  return <SyntaxHighlighter language='javascript' style={tomorrowNightEighties}>{codeString}</SyntaxHighlighter>
+	  return <SyntaxHighlighter language={content.language} style={tomorrowNightEighties}>{content.contents}</SyntaxHighlighter>
 	}
 
 	render() {
@@ -140,6 +147,8 @@ class Project extends Component {
 				return this.renderVideoGallery(content.videoGallery);
 			} else if (content.code) {
 				return this.renderSyntax(content.code)
+			} else if (content.bulletlist) {
+				return this.renderBulletList(content.bulletlist)
 			}
 
 			return null

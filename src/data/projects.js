@@ -1,4 +1,81 @@
+import regex_load_data from './code-snippets/regex/load-in-data'
+import regex_search_pattern from './code-snippets/regex/apply-regex-search'
+
 const projects = [
+{
+		id: 0, 
+		cover : 'regex/cover.png',
+		source: undefined,
+		name: 'Formatting dates with Regex',
+		tags: ['Text mining', 'Regex', 'Data Cleaning', 'Data Formatting'],
+		role: ['Developer'], 
+		created_with: ['Pandas', 'Regex', 'Python'], 
+		date: 2017, 
+		collaborators: ['None'],
+		content:  [
+			{
+				paragraph: [
+					{
+						text: "This is an example of one of the regex assignments i have crossed, which i really enjoyed. The task is simple: working with messy medical data, use regex to extract dates from the data, and sort the dataframe by date."
+					},
+					{
+						text: " Each line of the dataset corresponds to a medical note. Each note has a date that needs to be extracted, but each date is encoded in one of many formats."
+					},
+				], 
+			},
+			{
+				bulletlist: [
+					'04/20/2009; 04/20/09; 4/20/09; 4/3/09',
+					'Mar-20-2009; Mar 20, 2009; March 20, 2009; Mar. 20, 2009; Mar 20 2009',
+					'Mar 20th, 2009; Mar 21st, 2009; Mar 22nd, 2009',
+					'Feb 2009; Sep 2009; Oct 2010',
+				]
+			},
+			{
+				paragraph: [
+					{
+						text: "These dates is then \"Hidden\" beneath the medical note, for instance: "
+					}
+				], 
+			},
+			{
+				bulletlist: [
+					'03/25/93 Total time of visit (in minutes):\n',
+					'7 on 9/27/75 Audit C Score Current:\n',
+					'sshe plans to move as of 7/8/71 In-Home Servic...',
+				]
+			},
+			{
+				subtitle: "Approach and implementation"
+			},
+			{
+				paragraph: [
+					{
+						text: "Let's start by loading in the data and get a view of it: "
+					}
+				], 
+			},
+			{
+				code:	{
+					language: 'python',
+					contents: regex_load_data
+				}
+			},
+			{
+				paragraph: [
+					{
+						text: "After we have loaded in the data we are ready to apply the regex rules. For each medical note string in the data series, we search with multiple regex patterns, and try to extract the date. We also prefix, and map months as string to numbers."
+					}
+				], 
+			},
+			{
+				code:	{
+					language: 'python',
+					contents: regex_search_pattern
+				}
+			},
+		]
+	},
 	// {
 	// 	id: 0, 
 	// 	cover : 'data-course/project-cover.png',
